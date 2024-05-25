@@ -14,8 +14,14 @@ body {
     margin: 0;
     section {
         margin-bottom: -1.375rem;
-        .section-padding {padding: 4.25rem 9.375rem;}
+        .section-padding {padding: 4.25rem 8.125rem;}
     }
+}
+
+h1 {
+    font-family: 'TT Rounds Neue Trial Black';
+    font-size: 2rem;
+    text-align: center;
 }
 
 /*NAVBAR*/
@@ -63,7 +69,8 @@ nav {
         background-size: 100%;
         color: #f7d65a;
         text-shadow: 0.313rem 0.125rem #000d49;
-    } /*different button for current page*/
+        cursor: default;
+    } /*different button and default cursor for current page*/
 
     .gameplay-dropdown {
         display: none;
