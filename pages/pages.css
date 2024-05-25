@@ -1,0 +1,159 @@
+/*==========FONTS==========*/
+@font-face { font-family: 'TT Rounds Neue Trial Black'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Black.ttf'); } /*bold*/
+@font-face { font-family: 'TT Rounds Neue Trial Medium'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Medium.ttf'); } /*semi-bold*/
+@font-face { font-family: 'TT Rounds Neue Trial Regular'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Regular.ttf'); } /*regular*/
+@font-face { font-family: 'retro-land-mayhem'; src: url('../fonts/retro-land-mayhem.ttf'); } 
+
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    background-color: #FD87B8;
+    font-family: 'TT Rounds Neue Trial Medium';
+}
+.body {
+    margin: 0;
+    section {
+        margin-bottom: -1.375rem;
+        .section-padding {padding: 0.625rem 8.125rem;}
+    }
+}
+
+h1 {
+    font-family: 'TT Rounds Neue Trial Black';
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*NAVBAR*/
+#nav-logo {
+    /*border: 2px dashed black;  /*DELETE WHEN DONE*/
+    img { height: 6.25rem; };
+} /*GAME LOGO*/
+nav {
+    font-family: 'retro-land-mayhem';
+    font-size: 1.2rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    padding: 0 1.25rem;
+    z-index: 10;
+    background-color: black;
+    /*border: 2px dashed pink;  /*DELETE WHEN DONE*/
+    .right-links { margin-left: auto; }
+    .right-links a {
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        width: 12rem;
+        height: 4rem;
+        line-height: 2.7rem;
+        color: white;
+        text-shadow: 0.313rem 0.125rem #000d49;
+        background-image: url('../img/button.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+    }
+    .right-links a:hover {
+        background-image: url('../img/button\ current.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #f7d65a;
+        text-shadow: 0.313rem 0.125rem #000d49;
+    }
+    .right-links .current-page {
+        background-image: url('../img/button\ current.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #f7d65a;
+        text-shadow: 0.313rem 0.125rem #000d49;
+        cursor: default;
+    } /*different button for current page*/
+
+    .gameplay-dropdown {
+        display: none;
+        position: absolute;
+        right: 1.25rem;
+        background-color: black;
+        /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+        a { display: block; /*border: 2px dashed white;  /*DELETE WHEN DONE*/ }
+    } /*hidden dropdown*/
+    #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
+}
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    padding: 4.5rem 3rem 0.5rem;
+    background-image: url('../img/footer/footer.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    color: white;
+}
+.footer-flex {
+    width: 100%;
+    /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    display: flex;
+    align-items: center;
+    .tako-studio {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    } /*parent container for Tako Boy Studios logo + socials*/
+    .tako-studios-logo a {
+        width: 15rem;
+        display: block;
+        background-image: url('../img/footer/logo tako boy studios.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease-in-out;
+    } /*Tako Boy Studios logo container*/
+    /* change the bg image on hover */
+    #tako-studios {
+        width: 15rem;
+        opacity: 0;
+    } /* hidden image for fade-in transition*/
+    .tako-studios-logo a:hover {
+        background-image: url('../img/footer/logo tako boy studios hover.png');
+        opacity: 1;
+    }
+
+    .socials {/*border: 3px dashed white; DELETE WHEN DONE*/
+        align-self: flex-end;
+        img { 
+            display: block; 
+            height: 2.5rem;
+            width: auto;
+            margin: 0.3rem 1rem;
+        }
+        #twitter:hover { content: url('../img/footer/icon\ x\ hover.png'); }
+        #discord:hover { content: url('../img/footer/icon\ discord\ hover.png'); }
+    }
+    .footer-gif {
+        text-align: center;
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+        #gif { width: 19.5rem; }
+    }
+    .playstore { 
+        display: block; 
+        margin-top: 1.25rem;
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    }
+    #appstore { 
+        width: 12.5rem; 
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    }
+    #googleplay { 
+        width: 12.7rem; 
+        margin-top: -1.25rem;
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    }
+    .footer-p {
+        text-align: left;
+        margin-top: -2.25rem;
+        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    }
+}
