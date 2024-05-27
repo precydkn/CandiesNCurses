@@ -24,7 +24,14 @@ h1 {
     text-align: center;
 }
 
-/*NAVBAR*/
+/*==========HEADER*/
+#header-img  { width: 100%; } /*GAME POSTER*/
+header #header-spacer {
+    margin: -1.25rem 0 -0.313rem;
+    /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+    img {width: 100%;};
+}
+/*=====NAVBAR*/
 #nav-logo {
     /*border: 2px dashed black;  /*DELETE WHEN DONE*/
     img { height: 6.25rem; };
@@ -82,11 +89,35 @@ nav {
     } /*hidden dropdown*/
     #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
 }
-#header-img  { width: 100%; } /*GAME POSTER*/
 
-/*SECTION PAGES BUTTONS*/
+/*=========DESCRIPTION SECTION*/
+.description {
+    background: 
+    url('img/spacer1.2b.png') no-repeat top/contain, 
+    url('img/spacer1.2t.png') no-repeat bottom/contain;
+    /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+    img { height: 18.75rem; }
+    .section-flex { 
+        display: flex;
+        align-items: center;
+    }
+}
+.video {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: url('img/tv.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    video { width: 50%; }
+} /*GAME TRAILER*/
+
+/*==========SECTION PAGES BUTTONS*/
 .content-nav-flex {
-    background-image: url('img/bg/checkered-1.1.png');
+    background-image: url('img/spacer1.2b.png'), url('img/bg/checkered-1.1.png');
+    background-size: contain, auto;
+    background-position: center top;
+    background-repeat: no-repeat, repeat;
     /*border: 2px dashed white;  /*DELETE WHEN DONE*/
     .section-padding {
         width: 100%;
@@ -145,7 +176,7 @@ nav {
     }
 } 
 
-/*FOOTER*/
+/*==========FOOTER*/
 footer {
     width: 100%;
     padding: 4.5rem 3rem 0.5rem;
@@ -220,7 +251,24 @@ footer {
     }
 }
 
-/*==========ANIMATIONS==========*/
+/*SCROLLBAR*/
+::-webkit-scrollbar{ 
+    width: 0.7rem;
+    background: linear-gradient(#7544ea, #583dc7);
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(#7544ea, #583dc7);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#fe85b8, #ad4de5);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    border: 2px solid #FDB1D1;
+}
+
+/*==========ANIMATIONS*/
 @keyframes infinite-diagonal {
     from { background-position: 0 0; }
     to { background-position: 500px 500px; }
