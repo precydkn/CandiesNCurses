@@ -1,5 +1,55 @@
-table {
-    table-layout: fixed;
-    width: 100%;
-    text-align: center;
+/*==========FEATURES SECTION*/
+.features {
+    background: url('../img/spacer2.2t.png') no-repeat bottom/contain;
+    table {
+        width: 100%;
+        border: 2px dashed white;  /*DELETE WHEN DONE*/
+    }
+    /*td, tr {
+        border: 2px dashed white;  /*DELETE WHEN DONE
+    }*/
 }
+
+/*==========REVIEWS SECTION*/
+.reviews {
+    background: 
+    url('../img/spacer2.2b.png') no-repeat top/contain, 
+    url('../img/spacer2.2t.png') no-repeat bottom/contain,
+    linear-gradient(transparent, #7c2779);
+
+    .applestore, .googleplay, .rev { 
+        width: 100%; 
+        border: 2px dashed white;  /*DELETE WHEN DONE*/ 
+        text-align: center;
+        align-self: center;
+        margin: 20px 0;
+    }
+    .rev {
+        height: 9.375rem;
+        background: url('p-img/about/frame-2.3.png') no-repeat center/contain;
+        margin: 0 5px;
+        padding: 20px 60px;
+    }
+    .applestore, .googleplay {
+        background: url('p-img/about/frame.png') no-repeat center/contain;
+        height: 85px;
+    }
+}
+
+/*==========HISTORY SECTION*/
+.history {
+    color: white;
+    background-image: url('../img/bg/candybones-1.png');
+    animation: infinite-diagonal 10s linear infinite;
+    h1 { color: #FD87B8; }
+}
+.history-spacer {
+    background: url('../img/spacer2.2b.png') no-repeat top/contain;
+}
+
+
+/*==========ANIMATIONS*/
+@keyframes infinite-diagonal {
+    from { background-position: 0 0; }
+    to { background-position: 500px -500px; }
+} /*bg infinitely moves diagonally*/
