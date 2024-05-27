@@ -1,34 +1,25 @@
-/*==========FONTS==========*/
-@font-face { font-family: 'TT Rounds Neue Trial Black'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Black.ttf'); } /*bold*/
-@font-face { font-family: 'TT Rounds Neue Trial Medium'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Medium.ttf'); } /*semi-bold*/
-@font-face { font-family: 'TT Rounds Neue Trial Regular'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Regular.ttf'); } /*regular*/
-@font-face { font-family: 'retro-land-mayhem'; src: url('../fonts/retro-land-mayhem.ttf'); } 
-
-h1 {
-    font-family: 'TT Rounds Neue Trial Black';
-    text-align: center;
+/*==========CHARACTERS*/
+.characters {
+    background: url('../img/spacer2.2t.png') no-repeat bottom/contain;
 }
-
-section {
-    margin-top: 7.5rem;
-    /*border: 3px dashed white; /*DELETE WHEN DONE*/
-}
-
-.flex { display: flex; }
-
-/*=======CHARACTERS=======*/
-.char-focus {
+.char-focus-panel {
+    position: relative;
     width: 100%;
-    background-image: url('p-img/npc/frame-2.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border: 2px dashed white; /*DELETE WHEN DONE*/
+    background: url('p-img/npc/frame-2.png') no-repeat center/contain;
+    /*border: 2px dashed white; /*DELETE WHEN DONE*/
+    .char-info { 
+        position: absolute;
+        text-align: center;
+        padding: 0 1.563rem;
+        display: none; /*hide all character info initially*/
+        img { width: 18.75rem;}
+        p { margin-top: -2.5rem; }
+    }
 }
 .char-table table {
-    border: 3px dashed white; /*DELETE WHEN DONE*/
+    /*border: 3px dashed white; /*DELETE WHEN DONE*/
     text-align: center;
-    width: 650px;
+    width: 40.625rem;
     margin: 0 auto;
     img {
         width: 12.5rem;
@@ -44,21 +35,49 @@ section {
     }
     /*tr, td {border: 3px dashed white; }*/
 }
+.enemy-table table {
+    /*border: 3px dashed white; /*DELETE WHEN DONE*/
+    width: 34.375rem;
+    text-align: center;
+    margin: 0 auto;
+    img {
+        width: 12.5rem;
+        display: block;
+        margin: 0 auto;
+        /*border: 2px dashed white; /*DELETE WHEN DONE*/
+    }
+    td {
+        background: url('p-img/npc/frame-1.2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 14.375rem;
+    }
+    #empty { all: unset; }
+}
 
-/*=======ROOMS=======*/
+/*==========ROOMS*/
+.rooms {
+    background-image: url('../img/spacer2.2b.png'), url('../img/spacer2.2t.png');
+    background-size: contain;
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+}
 .room-name {
     display: block;
     height: 8.75rem;
 }
 
-/*=======ITEMS=======*/
-/*===Flashlights===*/
+/*==========ITEMS*/
+.items {
+    background: url('../img/spacer2.2b.png') no-repeat top/contain;
+}
+/*===Flashlights*/
 .light-focus {
     width: 100%;
-    background-image: url('p-img/npc/frame-2.png');
+    background-image: url('p-img/flashlights/frame-4.png');
     background-repeat: no-repeat;
-    background-size: 450px;
-    border: 2px dashed white; /*DELETE WHEN DONE*/
+    background-size: 100%;
+    /*border: 2px dashed white; /*DELETE WHEN DONE*/
 }
 .light-table table {
     /*border: 3px dashed white; /*DELETE WHEN DONE*/
@@ -80,4 +99,45 @@ section {
         span { font-size: 0.9rem; }
         /*border: 2px dashed white; /*DELETE WHEN DONE*/
     }
+}
+
+/*===CHARMS & TREASURES*/
+.charms p, .treasures p {
+    padding: 0 8.125rem;
+}
+.charms-marquee, .treasures-marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.charms-marquee {
+    background: url('../img/bg/dia-3.png');
+    background-size: 300px;
+}
+.charms-icons, .treasures-icons {
+    display: inline-block;
+    img { margin: 1.875rem; }
+}
+.charms-icons {
+    animation: marquee1 30s linear infinite;
+}
+.charms-marquee:hover .charms-icons, .treasures-marquee:hover .treasures-icons { 
+    animation-play-state: paused; 
+} /*stop marquee on hover*/
+
+.treasures-marquee {
+    background: url('../img/bg/dia-2.png');
+    background-size: 300px;
+}
+.treasures-icons {
+    animation: marquee2 30s linear infinite;
+}
+
+/*==========ANIMATIONS*/
+@keyframes marquee1 {
+    from { transform: translateX(0) }
+    to { transform: translateX(-100%) }
+}
+@keyframes marquee2 {
+    from { transform: translateX(-100%) }
+    to { transform: translateX(0) }
 }
