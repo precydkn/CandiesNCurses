@@ -9,283 +9,352 @@
     <link rel="icon" type="images--" href="p-img/flashlights/3 Firefly Lantern.png"> <!--page icon-->
 </head>
 <body>
-    <div class="body">
-        <nav>
-            <a href="https://www.takoboystudios.com/candies-n-curses" target="_blank" id="nav-logo"><img src="../img/logo cnc.png"></a>
-            <div class="right-links">
-                <a href="../index.html" id="home">Home</a> 
-                <a href="about.html" id="about">About</a>
-                <a id="gameplay" role="link" aria-disabled="true" class="current-page">Gameplay</a> <!--current page link is not clickable-->
-                <div class="gameplay-dropdown">
-                    <a href="#Characters" class="dropdown-btn">Characters</a>
-                    <a href="#Rooms" class="dropdown-btn">Rooms</a>
-                    <a href="#Items" class="dropdown-btn">Items</a>
-                </div>
-            </div>            
-        </nav>
-        <section>
-            <div class="characters" id="Characters">
-                <div class="section-padding">
-                    <h1>Characters</h1>
-                    <div class="flex">
-                        <div class="char-focus-panel">
-                            <div class="char-info" id="Molly">
-                                <img src="p-img/npc/Molli.gif" alt="Molli">
-                                <p>Molli Pop, the hero of our journey! Molli is a quiet girl, but won't hesitate to speak her mind when she feels something is amiss. She can give a standoffish vibe to those who don't know her, but her eccentric pink hair and cool demeanor, inherited from her father, make her fairly popular among her classmates. She sets out to the mansion after her friends dare her to do so - though her reason for going through with such a dare is primarily to shut them up about the ridiculous rumors, as opposed to giving in to peer pressure. Who knew she'd end up in such a mess? She's still a bit shocked that the mansion is ACTUALLY haunted.</p>
-                                </div>
-                            <div class="char-info" id="Olly">
-                                <img src="p-img/npc/Olly.gif" alt="Olly">
-                                <p>Olly is another student who's trapped in the mansion. Though unlike Molli, he's been stuck fending ghosts off for three years prior to Molli's arrival. He's definitely a scaredy cat, but he has a good heart - and he'll do whatever it takes to survive and keep his soul intact. Apparently there's a story behind how he ended up in the mansion, but you'll have to ask him directly!</p>
+    <!--GAME POSTER & NAVBAR-->
+    <nav>
+        <a href="https://www.takoboystudios.com/candies-n-curses" target="_blank" id="nav-logo"><img src="../img/home/logo cnc.png"></a>
+        <div class="right-links">
+            <a href="../index.html" id="home">Home</a> 
+            <a href="about.html" id="about">About</a>
+            <a id="gameplay" role="link" aria-disabled="true" class="current-page">Gameplay</a> <!--current page link is not clickable-->
+            <div class="gameplay-dropdown">
+                <a href="#Characters" class="dropdown-btn">Characters</a>
+                <a href="#Rooms" class="dropdown-btn">Rooms</a>
+                <a href="#Items" class="dropdown-btn">Items</a>
+            </div>
+        </div>            
+    </nav>
+    <section>
+        <!--CHARACTERS-->
+        <div class="characters" id="Characters">
+            <div class="section-padding">
+                <h1>Characters</h1>
+                <!--MOLLI + NPCs-->
+                <div class="flex">
+                    <div class="char-focus-panel">
+                        <!--all divs have a second class "info-panel" to select them all in js-->
+                        <div class="char-info info-panel" id="Molly">
+                            <img src="p-img/npc/Molli.gif" alt="Molli">
+                            <p>Molli Pop, the hero of our journey! She can give a standoffish vibe to those who don't know her, but her eccentric pink hair and cool demeanor, inherited from her father, make her fairly popular among her classmates. She sets out to the mansion due to her friends' dare her to do so - though her reason for going through with such a dare is primarily to shut them up about the ridiculous rumors, as opposed to giving in to peer pressure.</p>
                             </div>
-                            <div class="char-info" id="Bunber">
-                                <img src="p-img/npc/Bunber the Butler.gif" alt="Bunber the Butler">
-                                <p>Bunber is the mansion owner's butler. A loyal servant to a fault, he continues to fulfill his immense list of butler duties even in death. He's a floating encyclopedia of knowledge on the various ghouls and ghosts haunting the manor grounds. At first encounter, he can seem rather stuffy and uptight, but get to know him a bit better, and you'll soon see he has quite the mischievous side. What could possibly be under that serving platter he's always carrying around?</p>
-                            </div>
-                            <div class="char-info" id="Paige">
-                                <img src="p-img/npc/Paige the Peddler.gif" alt="Paige the Peddler">
-                                <p>Paige is a mysterious woman from far away. She's a collector of oddities, and searches the world for strange (sometimes spooky) things to add to her ever-growing collection. Her goal is to complete a catalog of mysterious artifacts, and then publish her findings so more people can learn about the many strange wonders of the world. She frequently asks Molli to bring her different charms she's found on her trek through the manor.</p>
-                            </div>
-                            <div class="char-info" id="Hector">
-                                <img src="p-img/npc/Hector the Hunter.gif" alt="Hector the Hunter">
-                                <p>Hector is a high-ranking member of the 'Hunter's Society' - an organization tasked to purge ghosts and other demonic creatures from the mortal world. He can come off as grumpy and rude, but there's a core of kindness beneath the roughness. For someone with so much ghost hunting experience, he frequently asks Molli to complete assignments for him. Maybe he's looking for an apprentice? Or maybe he's just not quite as skilled as he makes himself out to be...</p>
-                            </div>
-                            <div class="char-info" id="Candy">
-                                <img src="p-img/npc/Candy King.gif" alt="Candy King">
-                                <p>A kind, old man who once owned a famous candy shop. When his candy shop began to fall into obscurity, he was desperate to keep it afloat. After failing over and over again, unable to invent new treats that could restore his past fame, he fell into darkness. His frustration turned to anger and resentment, and he traded his humanity for other-worldly power. Can this sugar-coated curse ever be truly broken?</p>
-                            </div>
-                            <div class="char-info" id="Churra">
-                                <img src="p-img/npc/Churra.gif" alt="Churra">
-                                <p>Who knew such a creepy looking charm could summon such an adorable creature such as Churra? She'll fight by your side with the utmost bravery as she charges forward despite the danger.</p>
-                            </div>
-                            <div class="char-info" id="Goober">
-                                <img src="p-img/npc/Goober.gif" alt="Goober">
-                                <p>Call forth Molli's new best friend, Goober, to fight alongside you. He's too adorable not to bring along!</p>
-                            </div>
+                        <div class="char-info info-panel" id="Olly">
+                            <img src="p-img/npc/Olly.gif" alt="Olly">
+                            <p>Olly is another student who's trapped in the mansion. Though unlike Molli, he's been stuck fending ghosts off for three years prior to Molli's arrival. He's definitely a scaredy cat, but he has a good heart - and he'll do whatever it takes to survive and keep his soul intact. Apparently there's a story behind how he ended up in the mansion, but you'll have to ask him directly!</p>
                         </div>
-                        <div class="char-table">
-                            <table>
-                                <tr>
-                                    <td class="char-cell" data-char="Molly">Molli<img src="p-img/npc/Molli.gif" alt="Molli"></td>
-                                    <td class="char-cell" data-char="Olly">Olly<img src="p-img/npc/Olly.gif" alt="Olly"></td>
-                                    <td class="char-cell" data-char="Bunber">Bunber the Butler<img src="p-img/npc/Bunber the Butler.gif" alt="Bunber the Butler"></td>
-                                    <td class="char-cell" data-char="Paige">Paige the Peddler<img src="p-img/npc/Paige the Peddler.gif" alt="Paige the Peddler"></td>
-                                </tr>
-                                <tr>
-                                    <td class="char-cell" data-char="Hector">Hector the Hunter<img src="p-img/npc/Hector the Hunter.gif" alt="Hector the Hunter"></td>
-                                    <td class="char-cell" data-char="Candy">Candy King<img src="p-img/npc/Candy King.gif" alt="Candy King"></td>
-                                    <td class="char-cell" data-char="Churra">Churra<img src="p-img/npc/Churra.gif" alt="Churra"></td>
-                                    <td class="char-cell" data-char="Goober">Goober<img src="p-img/npc/Goober.gif" alt="Goober"></td>
-                                </tr>
-                            </table>
+                        <div class="char-info info-panel" id="Bunber">
+                            <img src="p-img/npc/Bunber the Butler.gif" alt="Bunber the Butler">
+                            <p>Bunber is the mansion owner's butler. A loyal servant to a fault, he continues to fulfill his immense list of butler duties even in death. He's a floating encyclopedia of knowledge on the various ghouls and ghosts haunting the manor. At first encounter, he can seem rather stuffy and uptight, but get to know him a bit better, and you'll see he has quite the mischievous side. What could possibly be under that serving platter he's always carrying around?</p>
+                        </div>
+                        <div class="char-info info-panel" id="Paige">
+                            <img src="p-img/npc/Paige the Peddler.gif" alt="Paige the Peddler">
+                            <p>Paige is a mysterious woman from far away. She's a collector of oddities, and searches the world for strange (sometimes spooky) things to add to her ever-growing collection. Her goal is to complete a catalog of mysterious artifacts, and then publish her findings so more people can learn about the many strange wonders of the world. She frequently asks Molli to bring her different charms she's found on her trek through the manor.</p>
+                        </div>
+                        <div class="char-info info-panel" id="Hector">
+                            <img src="p-img/npc/Hector the Hunter.gif" alt="Hector the Hunter">
+                            <p>Hector is a high-ranking member of the 'Hunter's Society' - an organization that purges ghosts and other demonic creatures from the mortal world. He can come off as grumpy and rude, but there's a core of kindness beneath the roughness. For someone with so much ghost hunting experience, he frequently asks Molli to complete assignments for him. Is he looking for an apprentice or is he just not quite as skilled as he makes himself out to be..?</p>
+                        </div>
+                        <div class="char-info info-panel" id="Candy">
+                            <img src="p-img/npc/Candy King.gif" alt="Candy King">
+                            <p>A kind, old man who once owned a famous candy shop. When his candy shop began to fall into obscurity, he was desperate to keep it afloat. After failing over and over again, unable to invent new treats that could restore his past fame, he fell into darkness. His frustration turned to anger and resentment, and he traded his humanity for other-worldly power. Can this sugar-coated curse ever be truly broken?</p>
+                        </div>
+                        <div class="char-info info-panel" id="Churra">
+                            <img src="p-img/npc/Churra.gif" alt="Churra">
+                            <p>Who knew such a creepy looking charm could summon such an adorable creature such as Churra? She'll fight by your side with the utmost bravery as she charges forward despite the danger.</p>
+                        </div>
+                        <div class="char-info info-panel" id="Goober">
+                            <img src="p-img/npc/Goober.gif" alt="Goober">
+                            <p>Call forth Molli's new best friend, Goober, to fight alongside you. He's too adorable not to bring along!</p>
                         </div>
                     </div>
-
-                    <h2>Enemies</h2>
-                    <div class="enemy-table">
+                    <div class="char-table">
+                        <!--data-char is used to access in js the id's info in char-focus-panel-->
                         <table>
                             <tr>
-                                <td>Slime <img src="p-img/enemies/Slime.gif" alt="Slime"></td>
-                                <td>Wraith <img src="p-img/enemies/Wraith.gif" alt="Wraith"></td>
-                                <td>Bones <img src="p-img/enemies/Bones.gif" alt="Bones"></td>
-                                <td>Ghost Gift <img src="p-img/enemies/Ghost Gift.gif" alt="Ghost Gift"></td>
-                                <td>Cinder Slime <img src="p-img/enemies/Cinder Slime.gif" alt="Cinder Slime"></td>
-                                <td>Pyromancer <img src="p-img/enemies/Pyromancer.gif" alt="Pyromancer"></td>
+                                <td class="td" data-char="Molly">Molli<img src="p-img/npc/Molli.gif" alt="Molli"></td>
+                                <td class="td" data-char="Olly">Olly<img src="p-img/npc/Olly.gif" alt="Olly"></td>
+                                <td class="td" data-char="Bunber">Bunber the Butler<img src="p-img/npc/Bunber the Butler.gif" alt="Bunber the Butler"></td>
+                                <td class="td" data-char="Paige">Paige the Peddler<img src="p-img/npc/Paige the Peddler.gif" alt="Paige the Peddler"></td>
                             </tr>
                             <tr>
-                                <td>Flambeau <img src="p-img/enemies/Flambeau.gif" alt="Flambeau"></td>
-                                <td>Toxic Slime <img src="p-img/enemies/Toxic Slime.gif" alt="Toxic Slime"></td>
-                                <td>Spitter <img src="p-img/enemies/Spitter.gif" alt="Spitter"></td>
-                                <td>Spider <img src="p-img/enemies/Spider.gif" alt="Spider"></td>
-                                <td>Necro Bones <img src="p-img/enemies/Necro Bones.gif" alt="Necro Bones"></td>
-                                <td>Toxomancer <img src="p-img/enemies/Toxomancer.gif" alt="Toxomancer"></td>
-                            </tr>
-                            <tr>
-                                <td id="empty"></td>
-                                <td>Bile Spider <img src="p-img/enemies/Bile Spider.gif" alt="Bile Spider"></td>
-                                <td>Venom Spitter <img src="p-img/enemies/Venom Spitter.gif" alt="Venom Spitter"></td>
-                                <td>Torch Spitter <img src="p-img/enemies/Torch Spitter.gif" alt="Torch Spitter"></td>
-                                <td>Spectre Knight <img src="p-img/enemies/Spectre Knight.gif" alt="Spectre Knight"></td>
+                                <td class="td" data-char="Hector">Hector the Hunter<img src="p-img/npc/Hector the Hunter.gif" alt="Hector the Hunter"></td>
+                                <td class="td" data-char="Candy">Candy King<img src="p-img/npc/Candy King.gif" alt="Candy King"></td>
+                                <td class="td" data-char="Churra">Churra<img src="p-img/npc/Churra.gif" alt="Churra"></td>
+                                <td class="td" data-char="Goober">Goober<img src="p-img/npc/Goober.gif" alt="Goober"></td>
                             </tr>
                         </table>
                     </div>
-                    <h2>Bosses</h2>
-                    <div class="enemy-table">
+                </div>
+                <!--Enemies-->
+                <h2>Enemies</h2>
+                <div class="enemy-table">
+                    <table>
+                        <tr>
+                            <td>Slime <img src="p-img/enemies/Slime.gif" alt="Slime"></td>
+                            <td>Wraith <img src="p-img/enemies/Wraith.gif" alt="Wraith"></td>
+                            <td>Bones <img src="p-img/enemies/Bones.gif" alt="Bones"></td>
+                            <td>Ghost Gift <img src="p-img/enemies/Ghost Gift.gif" alt="Ghost Gift"></td>
+                            <td>Cinder Slime <img src="p-img/enemies/Cinder Slime.gif" alt="Cinder Slime"></td>
+                            <td>Pyromancer <img src="p-img/enemies/Pyromancer.gif" alt="Pyromancer"></td>
+                        </tr>
+                        <tr>
+                            <td>Flambeau <img src="p-img/enemies/Flambeau.gif" alt="Flambeau"></td>
+                            <td>Toxic Slime <img src="p-img/enemies/Toxic Slime.gif" alt="Toxic Slime"></td>
+                            <td>Spitter <img src="p-img/enemies/Spitter.gif" alt="Spitter"></td>
+                            <td>Spider <img src="p-img/enemies/Spider.gif" alt="Spider"></td>
+                            <td>Necro Bones <img src="p-img/enemies/Necro Bones.gif" alt="Necro Bones"></td>
+                            <td>Toxomancer <img src="p-img/enemies/Toxomancer.gif" alt="Toxomancer"></td>
+                        </tr>
+                        <tr>
+                            <td id="empty"></td>
+                            <td>Bile Spider <img src="p-img/enemies/Bile Spider.gif" alt="Bile Spider"></td>
+                            <td>Venom Spitter <img src="p-img/enemies/Venom Spitter.gif" alt="Venom Spitter"></td>
+                            <td>Torch Spitter <img src="p-img/enemies/Torch Spitter.gif" alt="Torch Spitter"></td>
+                            <td>Spectre Knight <img src="p-img/enemies/Spectre Knight.gif" alt="Spectre Knight"></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Bosses-->
+                <h2>Bosses</h2>
+                <div class="enemy-table">
+                    <table>
+                        <tr>
+                            <td>Ghost King <img src="p-img/bosses/Ghost King.gif" alt=""></td>
+                            <td>Fire Spirit <img src="p-img/bosses/Fire Spirit.gif" alt=""></td>
+                            <td>Necro Witch <img src="p-img/bosses/Necro Witch.gif" alt=""></td>
+                            <td>Phantom Worm <img src="p-img/bosses/Phantom Worm.gif" alt=""></td>
+                            <td>Jack <img src="p-img/bosses/Jack.gif" alt=""></td>
+                            <td>Phantom King <img src="p-img/bosses/Phantom King.gif" alt=""></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--ROOMS-->
+        <div class="rooms" id="Rooms">
+            <div class="section-padding">
+                <h1>Rooms</h1>
+                <div class="room-carousel">
+                    <div><button id="prevBtn"><img src="p-img/rooms/arrowl.png" alt="Previous" class="prev"></button></div>
+                    <div class="rooms-container">
+                        <div class="room">
+                            <img src="p-img/rooms/1 Shudder Shade Study.png" alt="Shudder Shade Study" class="room-name">
+                            <img src="p-img/rooms/Shudder.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/2 Ember Cellar.png" alt="Ember Cellar" class="room-name">
+                            <img src="p-img/rooms/Ember.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/3 Undead Library.png" alt="Undead Library" class="room-name">
+                            <img src="p-img/rooms/Undead.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/4 Dinette of Doom.png" alt="Dinette of Doom" class="room-name">
+                            <img src="p-img/rooms/Dinette.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/5 Botanical Ballroom.png" alt="Botanical Ballroom" class="room-name">
+                            <img src="p-img/rooms/Botanical.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/6 Halls of Sorrow.png" alt="Halls of Sorrow" class="room-name">
+                            <img src="p-img/rooms/Halls.png" alt="" class="room-img">
+                        </div>
+                        <div class="room">
+                            <img src="p-img/rooms/7 Treasure Vault.png" alt="" class="room-name">
+                            <img src="p-img/rooms/Treasure.png" alt="" class="room-img">
+                        </div>
+                    </div>
+                    <div><button id="nextBtn"><img src="p-img/rooms/arrowr.png" alt="Next" class="next"></button></div>                        
+                </div>
+            </div>
+        </div>
+        <!--ITEMS-->
+        <div class="items" id="Items">
+            <div class="section-padding">
+                <h1 class="pink-text">Items</h1>
+                <!--Flashlights-->
+                <h2 class="pink-text">Flashlights</h2>
+                <p class="white-text">
+                    Flashlights are the primary weapon in the game, wielded by Molli in her quest to rid the mansion of the curse. Each one is infused with a powerful ghost-destroying aura. There are 11 flashlights that the player can unlock in the base game and they have three types: beam, lantern, and blade.
+                </p>
+                <div class="flex">
+                    <div class="light-focus-panel">
+                        <!--all divs have a second class "info-panel" to select them all in js-->
+                        <div class="light-info info-panel" id="Mollis">
+                            <img src="p-img/flashlights/1 Molli's Flashlight.png" alt="Molli's Flashlight">
+                            <p>The flashlight Molli brought with her to the mansion. Her father gave it to her so she'd be safe coming home at night. He probably wouldn't have guessed she'd use it for ghost-hunting. Reliable, sturdy, and simple: there's really nothing quite like it. Molli even built a device that lets her attatch it to her bicycle for stylish, safe night-riding!</p>
+                        </div>
+                        <div class="light-info info-panel" id="Ollys">
+                            <img src="p-img/flashlights/2 Olly's Flashlight.png" alt="Olly's Flashlight">
+                            <p>A beat-up, worn-out flashlight that belongs to Olly. He gives it to Molli as a gift for listening to his long winded tale of a tragic love story. But isn't it dangerous for Olly to give Molly his only means of self-defense? You'de be right, but Olly always carries an emergency spare. Safety first!</p>
+                        </div>
+                        <div class="light-info info-panel" id="Firefly">
+                            <img src="p-img/flashlights/3 Firefly Lantern.png" alt="Firefly Lantern">
+                            <p>A lantern that holds the ever-burning essence of a ghostly firefly. This essence materializes itself in the form of three sphere-like creatures that orbit around Molli. Although originating from the same ghostly entity, each sphere of light actually has its own personality!</p>
+                        </div>
+                        <div class="light-info info-panel" id="Atomic">
+                            <img src="p-img/flashlights/4 Atomic Fenix MX.png" alt="Atomic Fenix MX">
+                            <p>A burning red flashlight with a strange attachment that produces a magical flame. Apparently, Bunber frequently used this gadget when taking inventory in the mansion's freezer.</p>
+                        </div>
+                        <div class="light-info info-panel" id="Buster">
+                            <img src="p-img/flashlights/5 Buster Blade 9000.png" alt="Buster Blade 9000">
+                            <p>A magical sword that can cut through even the toughest ghosts! The hilt is that of a flashlight, and turning the power on causes the blade to materialize. Perfect for those who's only "weapon" experience comes from wielding standard, household flashlights!</p>
+                        </div>
+                        <div class="light-info info-panel" id="Pulverizer">
+                            <img src="p-img/flashlights/6 Pulverizer MP40.png" alt="Pulverizer MP40">
+                            <p>A flashlight with explosive circuitry, allowing it to fire powerful magic grenades from it's bulb. It's quite heavy, but any flashlight with the fancy mechanical engineering to produce bombs would be.</p>
+                        </div>
+                        <div class="light-info info-panel" id="Torchfly">
+                            <img src="p-img/flashlights/7 Torchfly Lantern.png" alt="Torchfly Lantern">
+                            <p>A powerful Torchfly lives inside the confines of this sturdy lantern. The orbs that rotate around Molli are intensely hot, and can melt any ghost they touch. It taught itself to fire projectiles by observing the various Spitters that live in the mansion.</p>
+                        </div>
+                        <div class="light-info info-panel" id="Virusfly">
+                            <img src="p-img/flashlights/8 Virusfly Lantern.png" alt="Virusfly Lantern">
+                            <p>A firefly that's been tainted by venomous lime extract, the Virusfly is a highly toxic creature that must be kept inside the lantern at all times. It's essence takes the form of green light spheres, that orbit Molli. Luckily, these spheres of light aren't poisonous enough to harm Molli. But they'll disintegrate ghosts with the slightest touch!</p>
+                        </div>
+                        <div class="light-info info-panel" id="Scorch">
+                            <img src="p-img/flashlights/9 Scorch Blade 9000R.png" alt="Scorch Blade 9000R">
+                            <p>A ghost-hunting blade that's been dipped in refined sugar-magma. It can cut through steel like a hot knife through butter. Just don't use it for any actual cooking as it's probably too dangerous.</p>
+                        </div>
+                        <div class="light-info info-panel" id="Blight">
+                            <img src="p-img/flashlights/10 Blight Blade 9000X.png" alt="Blight Blade 9000X">
+                            <p>A blade enchanted with the essence of cursed dreams. Thousands of nightmares have been captured within the steel of this sword - each nightmare exponentially increasing its ghoul-crushing power.</p>
+                        </div>
+                        <div class="light-info info-panel" id="Gorger">
+                            <img src="p-img/flashlights/11 Gorger's Lamp.png" alt="Gorger's Lamp">
+                            <p>A lamp-like cage that contains a creature with an insatiable appetite for ghosts and other-worldly beings. It's body is made of cursed light, and will slay any ghost it touches. As it fills its belly, it can release a shockwave of light that vaporizes nearby enemies. It sounds pretty scary, but the creature is actually quite cute!</p>
+                        </div>
+                    </div>
+                    <div class="light-table">
+                        <!--data-char is used to access in js the id's info in light-focus-panel-->
                         <table>
-                            <tr>
-                                <td>Ghost King <img src="p-img/bosses/Ghost King.gif" alt=""></td>
-                                <td>Fire Spirit <img src="p-img/bosses/Fire Spirit.gif" alt=""></td>
-                                <td>Necro Witch <img src="p-img/bosses/Necro Witch.gif" alt=""></td>
-                                <td>Phantom Worm <img src="p-img/bosses/Phantom Worm.gif" alt=""></td>
-                                <td>Jack <img src="p-img/bosses/Jack.gif" alt=""></td>
-                                <td>Phantom King <img src="p-img/bosses/Phantom King.gif" alt=""></td>
-                            </tr>
-                        </table>
+                        <tr>
+                            <td class="td" data-char="Mollis">Molli's Flashlight<img src="p-img/flashlights/1 Molli's Flashlight.png" alt="Molli's Flashlight"></td>
+                            <td class="td" data-char="Ollys">Olly's Flashlight<img src="p-img/flashlights/2 Olly's Flashlight.png" alt="Olly's Flashlight"></td>
+                            <td class="td" data-char="Firefly">Firefly Lantern<img src="p-img/flashlights/3 Firefly Lantern.png" alt="Firefly Lantern"></td>
+                            <td class="td" data-char="Atomic">Atomic Fenix MX<img src="p-img/flashlights/4 Atomic Fenix MX.png" alt="Atomic Fenix MX"></td>
+                        </tr>
+                        <tr>
+                            <td class="td" data-char="Buster">Buster Blade 9000<img src="p-img/flashlights/5 Buster Blade 9000.png" alt="Buster Blade 9000"></td>
+                            <td class="td" data-char="Pulverizer">Pulverizer MP40<img src="p-img/flashlights/6 Pulverizer MP40.png" alt="Pulverizer MP40"></td>
+                            <td class="td" data-char="Torchfly">Torchfly Lantern<img src="p-img/flashlights/7 Torchfly Lantern.png" alt="Torchfly Lantern"></td>
+                            <td class="td" data-char="Virusfly">Virusfly Lantern<img src="p-img/flashlights/8 Virusfly Lantern.png" alt="Virusfly Lantern"></td>
+                        </tr>
+                        <tr>
+                            <td class="td" data-char="Scorch"><span>Scorch Blade 9000R</span><img src="p-img/flashlights/9 Scorch Blade 9000R.png" alt="Scorch Blade 9000R"></td>
+                            <td class="td" data-char="Blight">Blight Blade 9000X<img src="p-img/flashlights/10 Blight Blade 9000X.png" alt="Blight Blade 9000X"></td>
+                            <td class="td" data-char="Gorger">Gorger's Lamp<img src="p-img/flashlights/11 Gorger's Lamp.png" alt="Gorger's Lamp"></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>  
+            </div>
+            <!--Charms-->
+            <div class="charms">
+                <h2 class="pink-text">Charms</h2>
+                <p class="white-text">Charms are special items that provide various buffs and enhancements to Molli Pop's abilities. These can affect her stats, provide passive abilities, or even modify her flashlight's performance.</p>
+                <div class="charms-marquee">
+                    <div class="charms-icons">
+                        <img src="p-img/charms/Beauty_charm 1.png" alt="">
+                        <img src="p-img/charms/Virus_charm 1.png" alt="">
+                        <img src="p-img/charms/Charisma_charm 1.png" alt="">
+                        <img src="p-img/charms/Sweet-tooth_charm 1.png" alt="">
+                        <img src="p-img/charms/Blasphemy_charm 1.png" alt="">
+                        <img src="p-img/charms/Magnet_charm 1.png" alt="">
+                        <img src="p-img/charms/Ecto-collector 1.png" alt="">
+                        <img src="p-img/charms/Undead_charm 1.png" alt="">
+                        <img src="p-img/charms/Swift_charm 1.png" alt="">
+                        <img src="p-img/charms/Gusto_charm 1.png" alt="">
+                        <img src="p-img/charms/Fortune_charm 1.png" alt="">
+                        <img src="p-img/charms/Lucky_break_charm 1.png" alt="">
+                        <img src="p-img/charms/Anti-venom_charm 1.png" alt="">
+                        <img src="p-img/charms/Bubblegum_charm 1.png" alt="">
+                        <img src="p-img/charms/Chain_link_charm 1.png" alt="">
+                        <img src="p-img/charms/Xp_pro_charm 1.png" alt="">
+                        <img src="p-img/charms/Ecto-meter_charm 1.png" alt="">
+                        <img src="p-img/charms/Devour_charm 1.png" alt="">
+                        <img src="p-img/charms/Rally_charm 1.png" alt="">
+                        <img src="p-img/charms/Trailblazer_charm 1.png" alt="">
+                        <img src="p-img/charms/Clash_charm 1.png" alt="">
+                        <img src="p-img/charms/Resistance_charm 1.png" alt="">
+                        <img src="p-img/charms/Discovery_charm 1.png" alt="">
+                        <img src="p-img/charms/Pup_charm 1.png" alt="">
+                        <img src="p-img/charms/Wing_charm 1.png" alt="">
+                        <img src="p-img/charms/Shockwave_charm 1.png" alt="">
+                        <img src="p-img/charms/Vigor_charm 1.png" alt="">
+                        <img src="p-img/charms/Sugar_bomb_charm 1.png" alt="">
+                        <img src="p-img/charms/Candy_burst_charm 1.png" alt="">
+                        <img src="p-img/charms/Inventors_charm 1.png" alt="">
+                        <img src="p-img/charms/Lillipad_charm 1.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="rooms" id="Rooms">
-                <div class="section-padding">
-                    <h1>Rooms</h1>
-                    <!--room 1-->
-                    <img src="p-img/rooms/1 Shudder Shade Study.png" alt="Shudder Shade Study" class="room-name">
-                    <img src="p-img/rooms/Shudder.png" alt="" class="room-img">
-                    <!--room 2-->
-                    <img src="p-img/rooms/2 Ember Cellar.png" alt="Ember Cellar" class="room-name">
-                    <img src="p-img/rooms/Ember.png" alt="" class="room-img">
-                    <!--room 3-->
-                    <img src="p-img/rooms/3 Undead Library.png" alt="Undead Library" class="room-name">
-                    <img src="p-img/rooms/Undead.png" alt="" class="room-img">
-                    <!--room 4-->
-                    <img src="p-img/rooms/4 Dinette of Doom.png" alt="Dinette of Doom" class="room-name">
-                    <img src="p-img/rooms/Dinette.png" alt="" class="room-img">
-                    <!--room 5-->
-                    <img src="p-img/rooms/5 Botanical Ballroom.png" alt="Botanical Ballroom" class="room-name">
-                    <img src="p-img/rooms/Botanical.png" alt="" class="room-img">
-                    <!--room 6-->
-                    <img src="p-img/rooms/6 Halls of Sorrow.png" alt="Halls of Sorrow" class="room-name">
-                    <img src="p-img/rooms/Halls.png" alt="" class="room-img">
-                    <!--room 7-->
-                    <img src="p-img/rooms/1 Shudder Shade Study.png" alt="" class="room-name">
-                    <img src="p-img/rooms/Shudder.png" alt="" class="room-img">
-                </div>
-            </div>
-            <div class="items" id="Items">
-                <div class="section-padding">
-                    <h1>Items</h1>
-                    <h2>Flashlights</h2>
-                    <p>
-                        Flashlights are the primary weapon in the game, wielded by Molli in her quest to rid the mansion of the curse. Each one is infused with a powerful ghost-destroying aura. There are 11 flashlights that the player can unlock in the base game and they have three types: beam, lantern, and blade.
-                    </p>
-                    <div class="flex">
-                        <div class="light-focus"></div>
-                        <div class="light-table">
-                            <table>
-                            <tr>
-                                <td>Molli's Flashlight<img src="p-img/flashlights/1 Molli's Flashlight.png" alt="Molli's Flashlight"></td>
-                                <td>Olly's Flashlight<img src="p-img/flashlights/2 Olly's Flashlight.png" alt="Olly's Flashlight"></td>
-                                <td>Firefly Lantern<img src="p-img/flashlights/3 Firefly Lantern.png" alt="Firefly Lantern"></td>
-                                <td>Atomic Fenix MX<img src="p-img/flashlights/4 Atomic Fenix MX.png" alt="Atomic Fenix MX"></td>
-                            </tr>
-                            <tr>
-                                <td>Buster Blade 9000<img src="p-img/flashlights/5 Buster Blade 9000.png" alt="Buster Blade 9000"></td>
-                                <td>Pulverizer MP40<img src="p-img/flashlights/6 Pulverizer MP40.png" alt="Pulverizer MP40"></td>
-                                <td>Torchfly Lantern<img src="p-img/flashlights/7 Torchfly Lantern.png" alt="Torchfly Lantern"></td>
-                                <td>Virusfly Lantern<img src="p-img/flashlights/8 Virusfly Lantern.png" alt="Virusfly Lantern"></td>
-                            </tr>
-                            <tr>
-                                <td><span>Scorch Blade 9000R</span><img src="p-img/flashlights/9 Scorch Blade 9000R.png" alt="Scorch Blade 9000R"></td>
-                                <td>Blight Blade 9000X<img src="p-img/flashlights/10 Blight Blade 9000X.png" alt="Blight Blade 9000X"></td>
-                                <td>Gorger's Lamp<img src="p-img/flashlights/11 Gorger's Lamp.png" alt="Gorger's Lamp"></td>
-                            </tr>
-                        </table>
-                        </div>
-                    </div>  
-                </div>
-                <div class="charms">
-                    <h2>Charms</h2>
-                    <p>Charms are special items that provide various buffs and enhancements to Molli Pop's abilities. These can affect her stats, provide passive abilities, or even modify her flashlight's performance.</p>
-                    <div class="charms-marquee">
-                        <div class="charms-icons">
-                            <img src="p-img/charms/Beauty_charm 1.png" alt="">
-                            <img src="p-img/charms/Virus_charm 1.png" alt="">
-                            <img src="p-img/charms/Charisma_charm 1.png" alt="">
-                            <img src="p-img/charms/Sweet-tooth_charm 1.png" alt="">
-                            <img src="p-img/charms/Blasphemy_charm 1.png" alt="">
-                            <img src="p-img/charms/Magnet_charm 1.png" alt="">
-                            <img src="p-img/charms/Ecto-collector 1.png" alt="">
-                            <img src="p-img/charms/Undead_charm 1.png" alt="">
-                            <img src="p-img/charms/Swift_charm 1.png" alt="">
-                            <img src="p-img/charms/Gusto_charm 1.png" alt="">
-                            <img src="p-img/charms/Fortune_charm 1.png" alt="">
-                            <img src="p-img/charms/Lucky_break_charm 1.png" alt="">
-                            <img src="p-img/charms/Anti-venom_charm 1.png" alt="">
-                            <img src="p-img/charms/Bubblegum_charm 1.png" alt="">
-                            <img src="p-img/charms/Chain_link_charm 1.png" alt="">
-                            <img src="p-img/charms/Xp_pro_charm 1.png" alt="">
-                            <img src="p-img/charms/Ecto-meter_charm 1.png" alt="">
-                            <img src="p-img/charms/Devour_charm 1.png" alt="">
-                            <img src="p-img/charms/Rally_charm 1.png" alt="">
-                            <img src="p-img/charms/Trailblazer_charm 1.png" alt="">
-                            <img src="p-img/charms/Clash_charm 1.png" alt="">
-                            <img src="p-img/charms/Resistance_charm 1.png" alt="">
-                            <img src="p-img/charms/Discovery_charm 1.png" alt="">
-                            <img src="p-img/charms/Pup_charm 1.png" alt="">
-                            <img src="p-img/charms/Wing_charm 1.png" alt="">
-                            <img src="p-img/charms/Shockwave_charm 1.png" alt="">
-                            <img src="p-img/charms/Vigor_charm 1.png" alt="">
-                            <img src="p-img/charms/Sugar_bomb_charm 1.png" alt="">
-                            <img src="p-img/charms/Candy_burst_charm 1.png" alt="">
-                            <img src="p-img/charms/Inventors_charm 1.png" alt="">
-                            <img src="p-img/charms/Lillipad_charm 1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="treasures">
-                    <h2>Treasures</h2>
-                    <p>Treasures are collectible items that can be found throughout the haunted mansion. These treasures often grant significant bonuses or unique abilities when equipped.</p>
-                    <div class="treasures-marquee">
-                        <div class="treasures-icons">
-                            <img src="p-img/treasures/Undead-curse.png" alt="">
-                            <img src="p-img/treasures/Lava-curse.png" alt="">
-                            <img src="p-img/treasures/Holy-curse.png" alt="">
-                            <img src="p-img/treasures/Icy-feet-curse.png" alt="">
-                            <img src="p-img/treasures/Devils-bargain.png" alt="">
-                            <img src="p-img/treasures/Purified-curse.png" alt="">
-                            <img src="p-img/treasures/Toxic-curse.png" alt="">
-                            <img src="p-img/treasures/Reapers-curse.png" alt="">
-                            <img src="p-img/treasures/Firefly-curse.png" alt="">
-                            <img src="p-img/treasures/Sour-heart-curse.png" alt="">
-                            <img src="p-img/treasures/Last-stand-curse.png" alt="">
-                            <img src="p-img/treasures/Living-dead-curse.png" alt="">
-                            <img src="p-img/treasures/Mad-rush-curse.png" alt="">
-                            <img src="p-img/treasures/Punching-bag-curse.png" alt="">
-                            <img src="p-img/treasures/Servant_s-curse.png" alt="">
-                            <img src="p-img/treasures/Spicy-feet-curse.png" alt="">
-                            <img src="p-img/treasures/Void-curse.png" alt="">
-                            
-                            <img src="p-img/treasures/Battery-bonbon.png" alt="">
-                            <img src="p-img/treasures/Sugar-heart.png" alt="">
-                            <img src="p-img/treasures/Moonlit-bubblegum.png" alt="">
-                            <img src="p-img/treasures/Spirit-fudge.png" alt="">
-                            <img src="p-img/treasures/Grandmas-cookie.png" alt="">
-                            <img src="p-img/treasures/Dragon-scale-yum-pop.png" alt="">
-                            <img src="p-img/treasures/Butterfly-sugar.png" alt="">
-                            <img src="p-img/treasures/Halo-bar.png" alt="">
-                            <img src="p-img/treasures/Cloak-gumdrop.png" alt="">
-                            <img src="p-img/treasures/Gross-feet-chew.png" alt="">
-                            <img src="p-img/treasures/Heart-lollipop.png" alt="">
-                            <img src="p-img/treasures/Butter-pop.png" alt="">
-                            <img src="p-img/treasures/Chocolate-mousse.png" alt="">
-                            <img src="p-img/treasures/Jab-breaker.png" alt="">
-                            <img src="p-img/treasures/Zappy-taffy.png" alt="">
-                        </div>
+            <!--Treasures-->
+            <div class="treasures">
+                <h2 class="pink-text">Treasures</h2>
+                <p class="white-text">Treasures are collectible items that can be found throughout the haunted mansion. These treasures often grant significant bonuses or unique abilities when equipped.</p>
+                <div class="treasures-marquee">
+                    <div class="treasures-icons">
+                        <img src="p-img/treasures/Undead-curse.png" alt="">
+                        <img src="p-img/treasures/Lava-curse.png" alt="">
+                        <img src="p-img/treasures/Holy-curse.png" alt="">
+                        <img src="p-img/treasures/Icy-feet-curse.png" alt="">
+                        <img src="p-img/treasures/Devils-bargain.png" alt="">
+                        <img src="p-img/treasures/Purified-curse.png" alt="">
+                        <img src="p-img/treasures/Toxic-curse.png" alt="">
+                        <img src="p-img/treasures/Reapers-curse.png" alt="">
+                        <img src="p-img/treasures/Firefly-curse.png" alt="">
+                        <img src="p-img/treasures/Sour-heart-curse.png" alt="">
+                        <img src="p-img/treasures/Last-stand-curse.png" alt="">
+                        <img src="p-img/treasures/Living-dead-curse.png" alt="">
+                        <img src="p-img/treasures/Mad-rush-curse.png" alt="">
+                        <img src="p-img/treasures/Punching-bag-curse.png" alt="">
+                        <img src="p-img/treasures/Servant_s-curse.png" alt="">
+                        <img src="p-img/treasures/Spicy-feet-curse.png" alt="">
+                        <img src="p-img/treasures/Void-curse.png" alt="">
+                        
+                        <img src="p-img/treasures/Battery-bonbon.png" alt="">
+                        <img src="p-img/treasures/Sugar-heart.png" alt="">
+                        <img src="p-img/treasures/Moonlit-bubblegum.png" alt="">
+                        <img src="p-img/treasures/Spirit-fudge.png" alt="">
+                        <img src="p-img/treasures/Grandmas-cookie.png" alt="">
+                        <img src="p-img/treasures/Dragon-scale-yum-pop.png" alt="">
+                        <img src="p-img/treasures/Butterfly-sugar.png" alt="">
+                        <img src="p-img/treasures/Halo-bar.png" alt="">
+                        <img src="p-img/treasures/Cloak-gumdrop.png" alt="">
+                        <img src="p-img/treasures/Gross-feet-chew.png" alt="">
+                        <img src="p-img/treasures/Heart-lollipop.png" alt="">
+                        <img src="p-img/treasures/Butter-pop.png" alt="">
+                        <img src="p-img/treasures/Chocolate-mousse.png" alt="">
+                        <img src="p-img/treasures/Jab-breaker.png" alt="">
+                        <img src="p-img/treasures/Zappy-taffy.png" alt="">
                     </div>
                 </div>
             </div>
-        </section>
-        <footer>
-            <div class="footer-flex">
-                <div class="footer-gif">
-                    <img src="../img/footer/cnc walking.gif" id="gif">
-                    <div class="footer-p"><p><small>&copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Gr 1</small></p></div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-gif">
+                <img src="../img/footer/cnc walking.gif" id="gif">
+                <div class="footer-p"><p><small>&copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Gr 1</small></p></div>
+            </div>
+            <div class="tako-studio">
+                <div class="tako-studios-logo">
+                    <a href="https://www.takoboystudios.com/" target="_blank"><img src="../img/footer/logo tako boy studios.png" alt="Tako Boys Studios Logo" id="tako-studios"></a>
                 </div>
-                <div class="tako-studio">
-                    <div class="tako-studios-logo">
-                        <a href="https://www.takoboystudios.com/" target="_blank"><img src="../img/footer/logo tako boy studios.png" alt="Tako Boys Studios Logo" id="tako-studios"></a>
-                    </div>
-                    <div class="socials">
-                        <a href="https://x.com/takoboystudios" target="_blank"><img src="../img/footer/icon x.png" id="twitter"></a>
-                        <a href="https://discord.com/invite/Gn5pk9z" target="_blank"><img src="../img/footer/icon discord.png" id="discord"></a>
-                    </div>
+                <div class="socials">
+                    <a href="https://x.com/takoboystudios" target="_blank"><img src="../img/footer/icon x.png" id="twitter"></a>
+                    <a href="https://discord.com/invite/Gn5pk9z" target="_blank"><img src="../img/footer/icon discord.png" id="discord"></a>
                 </div>
-                <div class="playstore">
-                    <a href="https://apps.apple.com/us/app/candies-n-curses/id1364187784" target="_blank"><img src="../img/footer/app store.png" id="appstore"></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.tomtominc.candiesncurses&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank"><img src="../img/footer/google play.png" id="googleplay"></a>
-                </div>
-            </div>            
-        </footer>
-    </div>
+            </div>
+            <div class="playstore">
+                <a href="https://apps.apple.com/us/app/candies-n-curses/id1364187784" target="_blank"><img src="../img/footer/app store.png" id="appstore"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.tomtominc.candiesncurses&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank"><img src="../img/footer/google play.png" id="googleplay"></a>
+            </div>
+        </div>            
+    </footer>
 
-    <script src="pages.js"></script>
+    <script src="pages.js"></script> <!--js link-->
 </body>
 </html>
