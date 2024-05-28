@@ -1,124 +1,86 @@
-/*duplicate the charms & treasures icons for marquee loop*/
+//==========GAMEPLAY Charms & Treasures
+//duplicate the charms & treasures icons for marquee loop
 var charmCopy = document.querySelector(".charms-icons").cloneNode(true),
 treasureCopy = document.querySelector(".treasures-icons").cloneNode(true);
 
 document.querySelector(".charms-marquee").appendChild(charmCopy);
 document.querySelector(".treasures-marquee").appendChild(treasureCopy);
 
-/*displaying character info
+//==========GAMEPLAY Characters & Flashlights
+//displaying individual info
 document.addEventListener('DOMContentLoaded', function() {
-    const charTableCells = document.querySelectorAll('.char-table table td');
-    const charFocusElements = document.querySelectorAll('.char-info');
+    const cells = document.querySelectorAll('.td'); //characters & flashlights table td
+    const infoPanels = document.querySelectorAll('.info-panel'); //characters & flashlights indiv info
+    const tables = document.querySelectorAll('.char-table, .light-table'); //characters & flashlights table
 
-    charTableCells.forEach(cell => {
+    cells.forEach(cell => {
+        //hover event on each td (shows individual information)
         cell.addEventListener('mouseenter', function() {
-            const characterClass = this.querySelector('img').className;
-            showCharacterFocus(characterClass);
-        });
+            const tdId = this.dataset.char;
+            infoPanels.forEach(panel => {
+                if (panel.id === tdId) {
+                    panel.style.display = 'block';
+                } else {
+                    panel.style.display = 'none';
+                }
+            });
 
-        cell.addEventListener('mouseleave', function() {
-            hideAllCharacterFocus();
+            //dim other cells (to highlight the hovered td)
+            cells.forEach(c => {
+                if (c !== cell) {
+                    c.style.filter = 'brightness(70%)';
+                } else {
+                    c.style.filter = 'brightness(100%)';
+                }
+            });
         });
     });
 
-    function showCharacterFocus(characterClass) {
-        charFocusElements.forEach(element => {
-            if (element.id === characterClass) {
-                element.style.display = 'block';
+    tables.forEach(table => {
+        //event when mouse is not hovering over any td
+        table.addEventListener('mouseleave', function() {
+            infoPanels.forEach(panel => {
+                panel.style.display = 'none';
+            });
+
+            //reset cell brightness (when mouse is not hovering on any td, all are 100% bright)
+            cells.forEach(c => {
+                c.style.filter = 'brightness(100%)';
+            });
+        });
+    });
+});
+
+//=========ROOMS
+document.addEventListener("DOMContentLoaded", function() {
+    const rooms = document.querySelectorAll('.room'); //indiv rooms
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentRoomIndex = 0; //first room
+
+    //function to show the current room and hide others
+    function showRoom(index) {
+        rooms.forEach((room, i) => {
+            if (i === index) {
+                room.style.display = 'block';
             } else {
-                element.style.display = 'none';
+                room.style.display = 'none';
             }
         });
     }
 
-    function hideAllCharacterFocus() {
-        charFocusElements.forEach(element => {
-            element.style.display = 'none';
-        });
-    }
-});*/
-document.addEventListener('DOMContentLoaded', function() {
-    const charCells = document.querySelectorAll('.char-cell');
-    const charFocuses = document.querySelectorAll('.char-info');
-    const charTable = document.querySelector('.char-table');
+    //show first room initially
+    showRoom(currentRoomIndex);
 
-    charCells.forEach(cell => {
-        cell.addEventListener('mouseenter', function() {
-            const charId = this.dataset.char;
-            charFocuses.forEach(focus => {
-                if (focus.id === charId) {
-                    focus.style.display = 'block';
-                    focus.style.filter = 'brightness(100%)';
-                    charTable.style.filter = 'brightness(70%)';
-                } else {
-                    focus.style.display = 'none';
-                }
-            });
-        });
-        cell.addEventListener('mouseleave', function() {
-            charFocuses.forEach(focus => {
-                focus.style.display = 'none';
-                charTable.style.filter = 'brightness(100%)';
-            });
-        })
+    //event listener for previous button
+    prevBtn.addEventListener('click', function() {
+        currentRoomIndex = (currentRoomIndex === 0) ? rooms.length - 1 : currentRoomIndex - 1; //subtract 1 from room length to access previous room
+        showRoom(currentRoomIndex); //pass current room's index to func to display it
+    });
+
+    //event listener for next button
+    nextBtn.addEventListener('click', function() {
+        currentRoomIndex = (currentRoomIndex === rooms.length - 1) ? 0 : currentRoomIndex + 1; //add 1 to room length to access next room
+        showRoom(currentRoomIndex); //pass current room's index to func to display it
     });
 });
-
-/*
-circular-slider == slideshow
-container == carousel
-text == slide
-slider == controls
-menu == room-name
-img == pointer-light
-
-menuItems == roomName
-
-
-const slideshow = document.querySelector(".slideshow"),
-image = document.querySelector(".controls .pointer-light"),
-indicator = document.querySelector(".indicator"),
-roomNames = document.querySelectorAll(".room-name img"),
-descriptions = document.querySelectorAll(".slide");
-
-const rotationValues = [-70, -50, -25, 0, 25, 50, 70],
-colors = ["red", "orange", "yellow", "green", "blue", "violet", "pink"],
-images = ["1 Shudder Shade Study", "2 Ember Cellar", "3 Undead Library", "4 Dinette of Doom", "5 Botanical Ballroom", "6 Halls of Sorrow", "6 Halls of Sorrow"]
-
-let itemIndex = 3; //current slide
-
-// func to rotate slider
-function rotate(rotationValue) {
-    image.style.transform = `rotate(${rotationValue}deg)`; //rotates indicator using the values from the rotationValues when this func is called
-    indicator.style.transform = `translate(-50%, -50%) rotate(${rotationValue}deg)`;
-}
-
-//loop through each room
-roomNames.forEach((roomName, i) => {
-    roomName.addEventListener("click", () => {
-        image.style.backgroundImage = "url('p-img/rooms/" + images[i] + ".png')";
-        slideshow.style.background = colors[i]; //bg color changes per room
-
-        if(i > itemIndex) {
-            rotate(rotationValues[itemIndex] - 10);
-        } else if (i < itemIndex) {
-            rotate(rotationValues[itemIndex] + 10);
-        } else {
-            return "";
-        }
-
-        //wait for the counter-rotation to finish
-        setTimeout(() => {
-            rotate(rotationValues[i]); //rotate using rotationValues
-        }, 300);
-
-        //hide all descriptions
-        descriptions.forEach(text => {
-            text.style.display = "none";
-        });
-        //show only corresponding description
-        descriptions[i].style.display = "block";
-        itemIndex = i;
-        });
-});
-*/
