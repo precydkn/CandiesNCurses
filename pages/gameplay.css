@@ -1,12 +1,14 @@
 /*==========CHARACTERS*/
+.info-panel { display: none; } /*hidden Characters & Flashlights info*/
 .characters {
-    background: url('../img/spacer2.2t.png') no-repeat bottom/contain;
+    background: 
+        url('../img/home/spacer2.2t.png') no-repeat bottom/contain,
+        url('../img/bg/skulls-0.png');
 }
 .char-focus-panel {
     position: relative;
     width: 100%;
     background: url('p-img/npc/frame-2.png') no-repeat center/contain;
-    /*border: 2px dashed white; /*DELETE WHEN DONE*/
     .char-info { 
         position: absolute;
         text-align: center;
@@ -14,10 +16,9 @@
         display: none; /*hide all character info initially*/
         img { width: 18.75rem;}
         p { margin-top: -2.5rem; }
-    }
+    } /*info on hover*/
 }
 .char-table table {
-    /*border: 3px dashed white; /*DELETE WHEN DONE*/
     text-align: center;
     width: 40.625rem;
     margin: 0 auto;
@@ -25,7 +26,6 @@
         width: 12.5rem;
         display: block;
         margin: 0 auto;
-        /*border: 2px dashed white; /*DELETE WHEN DONE*/
     }
     td {
         background-image: url('p-img/npc/frame-1.2.png');
@@ -33,10 +33,8 @@
         background-position: center;
         height: 14.375rem;
     }
-    /*tr, td {border: 3px dashed white; }*/
 }
 .enemy-table table {
-    /*border: 3px dashed white; /*DELETE WHEN DONE*/
     width: 34.375rem;
     text-align: center;
     margin: 0 auto;
@@ -44,7 +42,6 @@
         width: 12.5rem;
         display: block;
         margin: 0 auto;
-        /*border: 2px dashed white; /*DELETE WHEN DONE*/
     }
     td {
         background: url('p-img/npc/frame-1.2.png');
@@ -52,35 +49,72 @@
         background-position: center;
         height: 14.375rem;
     }
-    #empty { all: unset; }
+    #empty { all: unset; } /*reset format of that one cell*/
 }
 
 /*==========ROOMS*/
 .rooms {
-    background-image: url('../img/spacer2.2b.png'), url('../img/spacer2.2t.png');
-    background-size: contain;
-    background-position: top, bottom;
-    background-repeat: no-repeat;
-}
-.room-name {
-    display: block;
-    height: 8.75rem;
-}
+    text-align: center;
+    background: 
+        url('../img/home/spacer2.2b.png') no-repeat top/contain, 
+        url('../img/home/spacer2.2t.png') no-repeat bottom/contain,
+        url('p-img/rooms/mansion.png') no-repeat bottom/contain,
+        url('../img/bg/nightsky.png');
+    color: white;
+} /*parent container of ROOMS SECTION*/
+.room-carousel  {
+    display: flex;
+    width: 100%;
+    div {
+        width: 100%;
+        align-self: center;
+    }
+    button { 
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+    .prev:hover { content: url('p-img/rooms/arrowl-3.png'); }
+    .next:hover { content: url('p-img/rooms/arrowr-3.png'); }
+    .prev:active { content: url('p-img/rooms/arrowl-2.png'); }
+    .next:active { content: url('p-img/rooms/arrowr-2.png'); }
+} /*container of room container & buttons*/
+.rooms-container {
+    margin-bottom: -50px;
+    .room .room-name {
+        display: block;
+        height: 8.75rem;
+        margin: 0 auto;
+    }
+    .room .room-img {
+        height: 540px;
+    } /*indiv container of each room*/
+} /*container of individual rooms*/
 
 /*==========ITEMS*/
 .items {
-    background: url('../img/spacer2.2b.png') no-repeat top/contain;
+    background: 
+        url('../img/home/spacer2.2b.png') no-repeat top/contain,
+        url('../img/bg/skulls-1.png');
+    .white-text { color: white; }
+    .pink-text { color: #FD87B8; }
 }
 /*===Flashlights*/
-.light-focus {
+.light-focus-panel {
+    position: relative;
     width: 100%;
     background-image: url('p-img/flashlights/frame-4.png');
     background-repeat: no-repeat;
     background-size: 100%;
-    /*border: 2px dashed white; /*DELETE WHEN DONE*/
+    .light-info {
+        position: absolute;
+        text-align: center;
+        padding: 0 1.563rem;
+        img { width: 18.75rem;}
+        p { margin-top: -2.5rem; }
+    } /*info on hover*/
 }
 .light-table table {
-    /*border: 3px dashed white; /*DELETE WHEN DONE*/
     text-align: center;
     width: 650px;
     margin: 0 auto;
@@ -88,56 +122,39 @@
         width: 12.5rem;
         display: block;
         margin: auto;
-        /*border: 2px dashed white; /*DELETE WHEN DONE*/
     }
     td {
         background-image: url('p-img/flashlights/frame-3.png');
         background-repeat: no-repeat;
         background-position: center;
         height: 14.375rem;
-        
         span { font-size: 0.9rem; }
-        /*border: 2px dashed white; /*DELETE WHEN DONE*/
     }
 }
 
 /*===CHARMS & TREASURES*/
-.charms p, .treasures p {
-    padding: 0 8.125rem;
-}
+.charms p, .treasures p { padding: 0 8.125rem; }
 .charms-marquee, .treasures-marquee {
     white-space: nowrap;
     overflow: hidden;
-}
-.charms-marquee {
-    background: url('../img/bg/dia-3.png');
+    background-color: #7544ea;
     background-size: 300px;
 }
 .charms-icons, .treasures-icons {
     display: inline-block;
     img { margin: 1.875rem; }
 }
-.charms-icons {
-    animation: marquee1 30s linear infinite;
-}
-.charms-marquee:hover .charms-icons, .treasures-marquee:hover .treasures-icons { 
-    animation-play-state: paused; 
-} /*stop marquee on hover*/
+.charms-icons { animation: marquee1 30s linear infinite; }
+.charms-marquee:hover .charms-icons, .treasures-marquee:hover .treasures-icons { animation-play-state: paused; } /*stop marquee on hover*/
 
-.treasures-marquee {
-    background: url('../img/bg/dia-2.png');
-    background-size: 300px;
-}
-.treasures-icons {
-    animation: marquee2 30s linear infinite;
-}
+.treasures-icons { animation: marquee2 30s linear infinite; }
 
 /*==========ANIMATIONS*/
 @keyframes marquee1 {
     from { transform: translateX(0) }
     to { transform: translateX(-100%) }
-}
+} /*to the left*/
 @keyframes marquee2 {
     from { transform: translateX(-100%) }
     to { transform: translateX(0) }
-}
+} /*to the right*/
