@@ -5,7 +5,8 @@
 
 html{
     scroll-behavior: smooth; 
-    scroll-padding-top: 90px; 
+    scroll-padding-top: 90px;
+    cursor: url('img/cursor.png'), auto;
 }
 * { box-sizing: border-box; }
 body { 
