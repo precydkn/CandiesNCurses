@@ -1,38 +1,51 @@
 /*==========FEATURES SECTION*/
 .features {
-    background: url('../img/spacer2.2t.png') no-repeat bottom/contain;
-    table {
-        width: 100%;
-        border: 2px dashed white;  /*DELETE WHEN DONE*/
-    }
-    /*td, tr {
-        border: 2px dashed white;  /*DELETE WHEN DONE
-    }*/
+    color: white;
+    background: url('../img/bg/candybones-1.png');
+    animation: infinite-diagonal 10s linear infinite; /*bg animation*/
+    table { width: 100%; }
+    h1 { color: #FD87B8; }
+}
+.features-spacer {
+    background: url('../img/home/spacer2.2t.png') no-repeat bottom/contain;
+    .section-padding { margin-top: -16px; }
 }
 
 /*==========REVIEWS SECTION*/
 .reviews {
     background: 
-    url('../img/spacer2.2b.png') no-repeat top/contain, 
-    url('../img/spacer2.2t.png') no-repeat bottom/contain,
-    linear-gradient(transparent, #7c2779);
+        url('../img/home/spacer2.2b.png') no-repeat top/contain, 
+        url('../img/home/spacer2.2t.png') no-repeat bottom/contain,
+        linear-gradient(transparent, #7c2779);
 
+    .flex { justify-content: center; }
     .applestore, .googleplay, .rev { 
-        width: 100%; 
-        border: 2px dashed white;  /*DELETE WHEN DONE*/ 
+        width: 100%;
         text-align: center;
         align-self: center;
-        margin: 20px 0;
+        margin: 1.25rem 0;
     }
     .rev {
         height: 9.375rem;
         background: url('p-img/about/frame-2.3.png') no-repeat center/contain;
-        margin: 0 5px;
-        padding: 20px 60px;
+        margin: 0 0.313rem;
+        padding: 1.25rem 3.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .applestore, .googleplay {
         background: url('p-img/about/frame.png') no-repeat center/contain;
-        height: 85px;
+        height: 6.25rem;
+        width: 32%;
+        padding-top: 1.875rem;
+        color: white;
+        span {
+            display: block;
+            margin-top: 1.25rem;
+            color: black;
+            font-family: 'TT Rounds Neue Trial Black';
+        }
     }
 }
 
@@ -44,12 +57,12 @@
     h1 { color: #FD87B8; }
 }
 .history-spacer {
-    background: url('../img/spacer2.2b.png') no-repeat top/contain;
+    background: url('../img/home/spacer2.2b.png') no-repeat top/contain;
 }
 
 
 /*==========ANIMATIONS*/
 @keyframes infinite-diagonal {
     from { background-position: 0 0; }
-    to { background-position: 500px -500px; }
+    to { background-position: 31.25rem -31.25rem; }
 } /*bg infinitely moves diagonally*/
