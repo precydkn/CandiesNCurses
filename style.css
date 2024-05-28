@@ -1,23 +1,25 @@
 /*==========FONTS==========*/
 @font-face { font-family: 'TT Rounds Neue Trial Black'; src: url('fonts/TT\ Rounds\ Neue\ Trial\ Black.ttf'); } /*bold*/
 @font-face { font-family: 'TT Rounds Neue Trial Medium'; src: url('fonts/TT\ Rounds\ Neue\ Trial\ Medium.ttf'); } /*semi-bold*/
-@font-face { font-family: 'TT Rounds Neue Trial Regular'; src: url('fonts/TT\ Rounds\ Neue\ Trial\ Regular.ttf'); } /*regular*/
 @font-face { font-family: 'retro-land-mayhem'; src: url('fonts/retro-land-mayhem.ttf'); } 
 
+html{
+    scroll-behavior: smooth; 
+    scroll-padding-top: 90px;
+}
+html {
+    cursor: url('img/cursor.png'), auto;
+}
 * { box-sizing: border-box; }
 body {
     margin: 0; 
     background-color: #FD87B8;
     font-family: 'TT Rounds Neue Trial Medium';
-}
-.body {
-    margin: 0;
     section {
         margin-bottom: -1.375rem;
         .section-padding {padding: 4.25rem 8.125rem;}
     }
 }
-
 h1 {
     font-family: 'TT Rounds Neue Trial Black';
     font-size: 2rem;
@@ -28,14 +30,10 @@ h1 {
 #header-img  { width: 100%; } /*GAME POSTER*/
 header #header-spacer {
     margin: -1.25rem 0 -0.313rem;
-    /*border: 2px dashed white;  /*DELETE WHEN DONE*/
     img {width: 100%;};
 }
 /*=====NAVBAR*/
-#nav-logo {
-    /*border: 2px dashed black;  /*DELETE WHEN DONE*/
-    img { height: 6.25rem; };
-} /*GAME LOGO*/
+#nav-logo img {height: 6.25rem; } /*GAME LOGO*/
 nav {
     font-family: 'retro-land-mayhem';
     font-size: 1.2rem;
@@ -45,9 +43,10 @@ nav {
     top: 0;
     align-items: center;
     padding: 0 1.25rem;
-    z-index: 10;
+    z-index: 10; /*put NAV on top of all content*/
     background-color: black;
-    /*border: 2px dashed pink;  /*DELETE WHEN DONE*/
+    
+    /*NAV BUTTONS*/
     .right-links { margin-left: auto; }
     .right-links a {
         text-align: center;
@@ -58,20 +57,19 @@ nav {
         line-height: 2.7rem;
         color: white;
         text-shadow: 0.313rem 0.125rem #000d49;
-        background-image: url('img/button.png');
+        background-image: url('img/home/button.png');
         background-repeat: no-repeat;
         background-size: 100%;
-        /*border: 2px dashed white;  /*DELETE WHEN DONE*/
     }
     .right-links a:hover {
-        background-image: url('img/button\ current.png');
+        background-image: url('img/home/button\ current.png');
         background-repeat: no-repeat;
         background-size: 100%;
         color: #f7d65a;
         text-shadow: 0.313rem 0.125rem #000d49;
     }
     .right-links .current-page {
-        background-image: url('img/button\ current.png');
+        background-image: url('img/home/button\ current.png');
         background-repeat: no-repeat;
         background-size: 100%;
         color: #f7d65a;
@@ -84,18 +82,18 @@ nav {
         position: absolute;
         right: 1.25rem;
         background-color: black;
-        /*border: 2px dashed white;  /*DELETE WHEN DONE*/
-        a { display: block; /*border: 2px dashed white;  /*DELETE WHEN DONE*/ }
+        a { display: block; }
     } /*hidden dropdown*/
     #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
 }
 
 /*=========DESCRIPTION SECTION*/
 .description {
+    height: 100%;
     background: 
-    url('img/spacer1.2b.png') no-repeat top/contain, 
-    url('img/spacer1.2t.png') no-repeat bottom/contain;
-    /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+    url('img/home/spacer1.2b.png') no-repeat top/contain, 
+    url('img/home/spacer1.2t.png') no-repeat bottom/contain,
+    url('img/bg/stripes-0.png');
     img { height: 18.75rem; }
     .section-flex { 
         display: flex;
@@ -105,20 +103,23 @@ nav {
 .video {
     width: 100%;
     height: 100%;
-    text-align: center;
-    background-image: url('img/tv.png');
+    text-align: right;
+    background-image: url('img/home/tv.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    video { width: 50%; }
+    background-size: 66%;
+    background-position: right;
+    margin-top: -4.375rem;
+    video { 
+        width: 50%;
+        margin: 9.375rem 6.438rem 3.75rem;
+    }
 } /*GAME TRAILER*/
 
 /*==========SECTION PAGES BUTTONS*/
 .content-nav-flex {
-    background-image: url('img/spacer1.2b.png'), url('img/bg/checkered-1.1.png');
-    background-size: contain, auto;
-    background-position: center top;
-    background-repeat: no-repeat, repeat;
-    /*border: 2px dashed white;  /*DELETE WHEN DONE*/
+    background: 
+        url('img/home/spacer1.2b.png') no-repeat top/contain, 
+        url('img/bg/checkered-1.1.png');
     .section-padding {
         width: 100%;
         display: flex;
@@ -137,7 +138,6 @@ nav {
         text-align: center;
         align-content: flex-end;
         padding-bottom: 2rem;
-        /*border: 2px dashed white;  /*DELETE WHEN DONE*/
         filter: brightness(50%);
     }
     .con-buttons {
@@ -162,18 +162,10 @@ nav {
             filter: brightness(100%);
         }
     }
-    #a-con-rooms {        
-        background-image: url('img/pages-btn/rooms.png');
-    }
-    #a-con-characters {
-        background-image: url('img/pages-btn/characters.png');
-    }
-    #a-con-items {
-        background-image: url('pages/p-img/flashlights/Atomic\ Fenix\ MX.png');
-    }
-    #a-con-about {
-        background-image: url('img/pages-btn/about.png');
-    }
+    #a-con-rooms { background-image: url('img/pages-btn/rooms.png'); }
+    #a-con-characters { background-image: url('img/pages-btn/characters.png'); }
+    #a-con-items { background-image: url('pages/p-img/flashlights/4\ Atomic\ Fenix\ MX.png'); }
+    #a-con-about { background-image: url('img/pages-btn/about.png'); }
 } 
 
 /*==========FOOTER*/
@@ -187,14 +179,12 @@ footer {
 }
 .footer-flex {
     width: 100%;
-    /*border: 3px dashed white; /*DELETE WHEN DONE*/
     display: flex;
     align-items: center;
     .tako-studio {
         width: 100%;
         display: flex;
         justify-content: center;
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
     } /*parent container for Tako Boy Studios logo + socials*/
     .tako-studios-logo a {
         width: 15rem;
@@ -214,7 +204,7 @@ footer {
         opacity: 1;
     }
 
-    .socials {/*border: 3px dashed white; DELETE WHEN DONE*/
+    .socials {
         align-self: flex-end;
         img { 
             display: block; 
@@ -227,27 +217,22 @@ footer {
     }
     .footer-gif {
         text-align: center;
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
         #gif { width: 19.5rem; }
     }
     .playstore { 
         display: block; 
         margin-top: 1.25rem;
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
     }
     #appstore { 
-        width: 12.5rem; 
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
+        width: 12.5rem;
     }
     #googleplay { 
         width: 12.7rem; 
         margin-top: -1.25rem;
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
     }
     .footer-p {
         text-align: left;
         margin-top: -2.25rem;
-        /*border: 3px dashed white; /*DELETE WHEN DONE*/
     }
 }
 
