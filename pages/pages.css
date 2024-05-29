@@ -3,7 +3,7 @@
 @font-face { font-family: 'TT Rounds Neue Trial Medium'; src: url('../fonts/TT\ Rounds\ Neue\ Trial\ Medium.ttf'); } /*semi-bold*/
 @font-face { font-family: 'retro-land-mayhem'; src: url('../fonts/retro-land-mayhem.ttf'); } 
 
-html{
+html {
     scroll-behavior: smooth; 
     scroll-padding-top: 5.625rem;
     cursor: url('../img/cursor.png'), auto;
@@ -30,7 +30,10 @@ h2 { text-align: center; }
 .flex { display: flex; }
 
 /*NAVBAR*/
-#nav-logo img { height: 6.25rem; } /*GAME LOGO*/
+#nav-logo img { 
+    cursor: url('../img/cursor-hover.png'), pointer;
+    height: 6.25rem; 
+} /*GAME LOGO*/
 nav {
     font-family: 'retro-land-mayhem';
     font-size: 1.2rem;
@@ -52,6 +55,7 @@ nav {
         position: relative;
     }
     .right-links a {
+        cursor: url('../img/cursor-hover.png'), pointer;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -72,12 +76,12 @@ nav {
         text-shadow: 0.313rem 0.125rem #000d49;
     }
     .right-links .current-page {
+        cursor: url('../img/cursor.png'), auto;
         background-image: url('../img/home/button\ current.png');
         background-repeat: no-repeat;
         background-size: 100%;
         color: #f7d65a;
         text-shadow: 0.313rem 0.125rem #000d49;
-        cursor: url('../img/cursor-hover.png');
     } /*different button for current page*/
 
     .gameplay-dropdown {
@@ -91,12 +95,12 @@ nav {
     #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
     /*music button*/
     button {
+        cursor: url('../img/cursor-hover.png'), pointer;
         background-color: transparent;
         border: none;
         filter: brightness(80%);
     }
     button:hover {
-        cursor: pointer;
         filter: brightness(100%);
     }
 }
@@ -120,6 +124,7 @@ footer {
         justify-content: center;
     } /*parent container for Tako Boy Studios logo + socials*/
     .tako-studios-logo a {
+        cursor: url('../img/cursor-hover.png'), pointer;
         width: 15rem;
         display: block;
         background-image: url('../img/footer/logo tako boy studios.png');
@@ -139,7 +144,8 @@ footer {
 
     .socials {
         align-self: flex-end;
-        img { 
+        img {
+            cursor: url('../img/cursor-hover.png'), pointer;
             display: block; 
             height: 2.5rem;
             width: auto;
@@ -156,8 +162,12 @@ footer {
         display: block; 
         margin-top: 1.25rem;
     }
-    #appstore { width: 12.5rem; }
+    #appstore { 
+        cursor: url('../img/cursor-hover.png'), pointer;
+        width: 12.5rem; 
+    }
     #googleplay { 
+        cursor: url('../img/cursor-hover.png'), pointer;
         width: 12.7rem; 
         margin-top: -1.25rem;
     }
