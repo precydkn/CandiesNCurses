@@ -80,14 +80,14 @@
     .next:active { content: url('p-img/rooms/arrowr-2.png'); }
 } /*container of room container & buttons*/
 .rooms-container {
-    margin-bottom: -50px;
+    margin-bottom: -3.125rem;
     .room .room-name {
         display: block;
         height: 8.75rem;
         margin: 0 auto;
     }
     .room .room-img {
-        height: 540px;
+        height: 33.75rem;
     } /*indiv container of each room*/
 } /*container of individual rooms*/
 
@@ -116,7 +116,7 @@
 }
 .light-table table {
     text-align: center;
-    width: 650px;
+    width: 40.625rem;
     margin: 0 auto;
     img {
         width: 12.5rem;
@@ -138,7 +138,7 @@
     white-space: nowrap;
     overflow: hidden;
     background-color: #7544ea;
-    background-size: 300px;
+    background-size: 18.75rem;
 }
 .charms-icons, .treasures-icons {
     display: inline-block;
