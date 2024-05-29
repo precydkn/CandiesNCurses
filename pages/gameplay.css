@@ -70,7 +70,7 @@
         align-self: center;
     }
     button { 
-        cursor: pointer;
+        cursor: url('../img/cursor-hover.png'), pointer;
         background-color: transparent;
         border: none;
     }
