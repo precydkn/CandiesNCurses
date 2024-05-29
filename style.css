@@ -45,7 +45,13 @@ nav {
     background-color: black;
     
     /*NAV BUTTONS*/
-    .right-links { margin-left: auto; }
+    .right-links { 
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        position: relative;
+    }
     .right-links a {
         text-align: center;
         text-decoration: none;
@@ -78,11 +84,22 @@ nav {
     .gameplay-dropdown {
         display: none;
         position: absolute;
-        right: 1.25rem;
+        top: 100%;
+        right: 0;
         background-color: black;
         a { display: block; }
     } /*hidden dropdown*/
     #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
+    /*music button*/
+    button {
+        background-color: transparent;
+        border: none;
+        filter: brightness(80%);
+    }
+    button:hover {
+        cursor: pointer;
+        filter: brightness(100%);
+    }
 }
 
 /*=========DESCRIPTION SECTION*/
