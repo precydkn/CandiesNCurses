@@ -5,7 +5,7 @@
 
 html{
     scroll-behavior: smooth; 
-    scroll-padding-top: 90px;
+    scroll-padding-top: 5.625rem;
     cursor: url('../img/cursor.png'), auto;
 }
 * { box-sizing: border-box; }
@@ -174,12 +174,12 @@ footer {
 }
 ::-webkit-scrollbar-track{
     background: linear-gradient(#7544ea, #583dc7);
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(#fe85b8, #ad4de5);
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 ::-webkit-scrollbar-thumb:hover{
-    border: 2px solid #FDB1D1;
+    border: 0.125rem solid #FDB1D1;
 }
