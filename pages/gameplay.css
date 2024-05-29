@@ -94,8 +94,10 @@
 /*==========ITEMS*/
 .items {
     background: 
-        url('../img/home/spacer2.2b.png') no-repeat top/contain,
+        url('../img/home/spacer2.2b.png') no-repeat top/contain, 
+        url('../img/home/spacer2.2t.png') no-repeat bottom/contain,
         url('../img/bg/skulls-1.png');
+    padding-bottom: 3.125rem;
     .white-text { color: white; }
     .pink-text { color: #FD87B8; }
 }
@@ -149,6 +151,22 @@
 
 .treasures-icons { animation: marquee2 30s linear infinite; }
 
+/*==========SCREENSHOTS*/
+.screenshots {
+    background: 
+        url('../img/home/spacer2.2b.png') no-repeat top/contain,
+        linear-gradient(#8a26af, #080042);
+    color: #FD87B8;
+}
+.ss-scroll-container {
+    background: url('../img/bg/candybones-2.png');
+    overflow: auto;
+    white-space: nowrap;
+    padding: 3.125rem;
+    animation: infinite-diagonal 100s linear infinite;
+}
+.ss-scroll-container img { height: 31.25rem; }
+
 /*==========ANIMATIONS*/
 @keyframes marquee1 {
     from { transform: translateX(0) }
@@ -158,3 +176,7 @@
     from { transform: translateX(-100%) }
     to { transform: translateX(0) }
 } /*to the right*/
+@keyframes infinite-diagonal {
+    from { background-position: 0 0; }
+    to { background-position: -301.25rem -301.25rem; }
+} /*bg infinitely moves diagonally*/
