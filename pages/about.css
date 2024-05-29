@@ -8,7 +8,7 @@
 }
 .features-spacer {
     background: url('../img/home/spacer2.2t.png') no-repeat bottom/contain;
-    .section-padding { margin-top: -16px; }
+    .section-padding { margin-top: -1rem; }
 }
 
 /*==========REVIEWS SECTION*/
