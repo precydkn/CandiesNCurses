@@ -32,6 +32,7 @@
         background-repeat: no-repeat;
         background-position: center;
         height: 14.375rem;
+        cursor: url('p-img/npc/cursor\ char.png'), auto;
     }
 }
 .enemy-table table {
@@ -126,11 +127,12 @@
         margin: auto;
     }
     td {
+        cursor: url('p-img/npc/cursor\ flash.png'), auto;
         background-image: url('p-img/flashlights/frame-3.png');
         background-repeat: no-repeat;
         background-position: center;
         height: 14.375rem;
-        span { font-size: 0.9rem; }
+        span { font-size: 0.9rem; };
     }
 }
 
