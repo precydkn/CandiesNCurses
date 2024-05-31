@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css"> <!--css link-->
-    <link rel="icon" type="image--" href="pages/p-img/treasures/Moonlit-bubblegum.png"> <!--page icon-->
+    <link rel="icon" type="image--" href="img/cursor.png"> <!--page icon-->
 </head>
 <body>
     <!--GAME POSTER & NAVBAR-->
@@ -15,13 +15,22 @@
             <div class="right-links">
                 <button id="music"><img src="img/home/button music muted.png" alt="Music Button"></button> <!--music button-->
                 <a role="link" aria-disabled="true" id="home" class="current-page">Home</a> <!--current page link is not clickable-->
-                <a href="pages/about.html" id="about">About</a>
-                <a href="pages/gameplay.html" id="gameplay">Gameplay</a>
-                <div class="gameplay-dropdown">
-                    <a href="pages/gameplay.html#Characters" class="dropdown-btn">Characters</a>
-                    <a href="pages/gameplay.html#Rooms" class="dropdown-btn">Rooms</a>
-                    <a href="pages/gameplay.html#Items" class="dropdown-btn">Items</a>
+                <div class="about-container">
+                    <a id="about">About</a>
+                    <div class="about-dropdown">
+                        <a href="pages/about.html" id="game">Game</a>
+                        <a href="pages/developers.html" id="developers">Developers</a>
+                    </div>
                 </div>
+                <div class="gameplay-container">
+                    <a href="pages/gameplay.html" id="gameplay">Gameplay</a>
+                    <div class="gameplay-dropdown">
+                        <a href="pages/gameplay.html#Characters" class="dropdown-btn">Characters</a>
+                        <a href="pages/gameplay.html#Rooms" class="dropdown-btn">Rooms</a>
+                        <a href="pages/gameplay.html#Items" class="dropdown-btn">Items</a>
+                    </div>
+                </div>
+                <a href="pages/contact.html">Contact</a>
             </div>
         </nav>
         <img src="img/home/header.jpg" id="header-img">
@@ -44,7 +53,7 @@
             </div>
         </div>
         <!--PAGES & SECTIONS-->
-        <div class="content-nav-flex">
+        <div class="content-nav">
             <div class="section-padding">
                 <div class="con-buttons" id="con-characters">
                     <a href="pages/gameplay.html#Characters" id="a-con-characters">Characters</a>
@@ -56,7 +65,10 @@
                     <a href="pages/gameplay.html#Items" id="a-con-items">Items</a>
                 </div>
                 <div class="con-buttons" id="con-about">
-                    <a href="pages/about.html" id="a-con-about">About</a>
+                    <a href="pages/about.html" id="a-con-about">About Game</a>
+                </div>
+                <div class="con-buttons" id="con-about">
+                    <a href="pages/developers.html" id="a-con-dev">Developers</a>
                 </div>
             </div>
         </div>
