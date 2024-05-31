@@ -80,16 +80,16 @@ nav {
         color: #f7d65a;
         text-shadow: 0.313rem 0.125rem #000d49;
     } /*different button and default cursor for current page*/
-
-    .gameplay-dropdown {
+    #about { cursor: url('img/cursor.png'), auto; }
+    .gameplay-container, .about-container { position: relative; }
+    .gameplay-dropdown, .about-dropdown {
         display: none;
         position: absolute;
         top: 100%;
-        right: 0;
         background-color: black;
         a { display: block; }
     } /*hidden dropdown*/
-    #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
+    #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover, #about:hover + .about-dropdown, .right-links .about-dropdown:hover { display: block; } /*display dropdown on hover*/
     /*music button*/
     button {
         cursor: url('img/cursor-hover.png'), pointer;
@@ -132,14 +132,15 @@ nav {
 } /*GAME TRAILER*/
 
 /*==========SECTION PAGES BUTTONS*/
-.content-nav-flex {
+.content-nav {
     background: 
         url('img/home/spacer1.2b.png') no-repeat top/contain, 
         url('img/bg/checkered-1.1.png');
     .section-padding {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 1em;
+        justify-content: center;
     }
     a {
         cursor: url('img/cursor-hover.png'), pointer;
@@ -161,7 +162,7 @@ nav {
         border: 0.5rem solid #7C2779;
         border-radius: 0.625rem;
         height: 25rem;
-        width: 18.75rem;
+        width: 17.75rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,7 +183,10 @@ nav {
     #a-con-rooms { background-image: url('img/pages-btn/rooms.png'); }
     #a-con-characters { background-image: url('img/pages-btn/characters.png'); }
     #a-con-items { background-image: url('pages/p-img/flashlights/4\ Atomic\ Fenix\ MX.png'); }
-    #a-con-about { background-image: url('img/pages-btn/about.png'); }
+    #a-con-about { 
+        background-image: url('img/pages-btn/about\ game.png');
+    }
+    #a-con-dev { background-image: url('img/pages-btn/about.png'); }
 } 
 
 /*==========FOOTER*/
