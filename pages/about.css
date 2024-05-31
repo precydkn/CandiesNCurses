@@ -2,7 +2,7 @@
 .features {
     color: white;
     background: url('../img/bg/candybones-1.png');
-    animation: infinite-diagonal 10s linear infinite; /*bg animation*/
+    animation: infinite-diagonal 100s linear infinite; /*bg animation*/
     table { width: 100%; }
     h1 { color: #FD87B8; }
 }
@@ -53,7 +53,7 @@
 .history {
     color: white;
     background-image: url('../img/bg/candybones-1.png');
-    animation: infinite-diagonal 10s linear infinite;
+    animation: infinite-diagonal 100s linear infinite;
     h1 { color: #FD87B8; }
 }
 .history-spacer {
@@ -64,5 +64,5 @@
 /*==========ANIMATIONS*/
 @keyframes infinite-diagonal {
     from { background-position: 0 0; }
-    to { background-position: 31.25rem -31.25rem; }
+    to { background-position: 301.25rem -301.25rem; }
 } /*bg infinitely moves diagonally*/
