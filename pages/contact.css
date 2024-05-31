@@ -1,0 +1,97 @@
+body { background: url('../img/bg/stripes-0.png'); }
+/*==========CONTACT INFO*/
+.location {
+    img { width: 100%; }
+    p { 
+        margin-left: 1.25rem; 
+        span { font-size: 1.875rem; }
+    }
+}
+.flex-contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    margin-bottom: 0.625rem;
+}
+.tako-studios-logo a {
+    cursor: url('../img/cursor-hover.png'), pointer;
+    display: block;
+    background-image: url('../img/footer/logo tako boy studios.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+} /*Tako Boy Studios logo container*/
+/* change the bg image on hover */
+#tako-studios {
+    opacity: 0;
+} /* hidden image for fade-in transition*/
+.tako-studios-logo a:hover {
+    cursor: url('../img/cursor-hover.png'), pointer;
+    background-image: url('p-img/contact/logo tako boy studios hover.png');
+    opacity: 1;
+}
+
+/*==========FORM*/
+.form {
+    background: url('p-img/contact/frame.png') no-repeat;
+    background-size: 100% 100%;
+    width: 50rem;
+    margin-left: auto;
+    padding: 1.25rem 1.25rem 1.25rem 0.625rem;
+    color: #d96cea;
+}
+.flex div, .email-msg div { 
+    width: 100%;
+    margin: 0.625rem;
+}
+input, textarea {
+    cursor: url('p-img/contact/cursor\ ibeam.png'), auto;
+    display: block;
+    background-color: #0a0052;
+    border-radius: 0.313rem;
+    color: white;
+    font-family: 'TT Rounds Neue Trial Medium';
+    padding: 0.625rem;
+    outline: none;
+    transition: 0.3s;
+}
+input[type="text"] {
+    height: 1.875rem;
+    width: 100%;
+    outline: none;
+    transition: 0.3s;
+} /*does not affect submit button*/
+.email-msg div { width: calc(100% - 1.25rem); }
+textarea {
+    resize: none;
+    overflow-y: auto;
+    width: 100%;
+    height: 6.25rem;
+}
+input[type="submit"] { 
+    margin-left: auto;
+    cursor: url('../img/cursor-hover.png'), pointer;
+}
+input[type="submit"]:hover {
+    background-color: #d96cea;
+    color: black;
+}
+input[type="text"]:focus, textarea:focus {
+    border: 2px solid #f7d65a;
+    border-radius: 0.313rem;
+}
+small, input[type="submit"] { color: #FD87B8; }
+small { align-self: center; }
+
+/*==========DISCORD INFO*/
+.flex-discord {
+    display: flex;
+    align-items: center;
+    h2 { text-align: left; };
+    h2, p { margin-left: 1.25rem; };
+    a img { 
+        width: 90%;
+        cursor: url('../img/cursor-hover.png'), pointer;        
+    };
+    .discord { text-align: right;}
+}
