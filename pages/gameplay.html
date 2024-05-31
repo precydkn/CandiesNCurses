@@ -9,19 +9,28 @@
     <link rel="icon" type="images--" href="p-img/flashlights/3 Firefly Lantern.png"> <!--page icon-->
 </head>
 <body>
-    <!--GAME POSTER & NAVBAR-->
+    <!--NAVBAR-->
     <nav>
         <a href="https://www.takoboystudios.com/candies-n-curses" target="_blank" id="nav-logo"><img src="../img/home/logo cnc.png"></a>
         <div class="right-links">
             <button id="music-g"><img src="../img/home/button music muted.png" alt="Music Button"></button> <!--music button-->
-            <a href="../index.html" id="home">Home</a> 
-            <a href="about.html" id="about">About</a>
-            <a id="gameplay" role="link" aria-disabled="true" class="current-page">Gameplay</a> <!--current page link is not clickable-->
-            <div class="gameplay-dropdown">
-                <a href="#Characters" class="dropdown-btn">Characters</a>
-                <a href="#Rooms" class="dropdown-btn">Rooms</a>
-                <a href="#Items" class="dropdown-btn">Items</a>
+            <a href="../index.html" id="home">Home</a>
+            <div class="about-container">
+                <a id="about">About</a> 
+                <div class="about-dropdown">
+                    <a href="about.html" id="game">Game</a>
+                    <a href="developers.html" id="developers">Developers</a>
+                </div>
             </div>
+            <div class="gameplay-container">
+                <a id="gameplay" role="link" aria-disabled="true" class="current-page">Gameplay</a> <!--current page link is not clickable-->
+                <div class="gameplay-dropdown">
+                    <a href="#Characters" class="dropdown-btn">Characters</a>
+                    <a href="#Rooms" class="dropdown-btn">Rooms</a>
+                    <a href="#Items" class="dropdown-btn">Items</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
         </div>            
     </nav>
     <section>
