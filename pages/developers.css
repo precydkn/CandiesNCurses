@@ -1,0 +1,23 @@
+body { 
+    background: url('../img/bg/checkered-1.1.png');
+    color: white;
+}
+h1 { color: #FD87B8; }
+.flex {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+}
+.profiles {
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+}
+a { 
+    cursor: url('../img/cursor-hover.png'), auto; 
+    display: block;
+}
+.profiles a img { 
+    width: 60%; 
+    margin-top: 1.25rem;
+}
