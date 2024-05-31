@@ -83,16 +83,16 @@ nav {
         color: #f7d65a;
         text-shadow: 0.313rem 0.125rem #000d49;
     } /*different button for current page*/
-
-    .gameplay-dropdown {
+    #about { cursor: url('../img/cursor.png'), auto; }
+    .gameplay-container, .about-container { position: relative; }
+    .gameplay-dropdown, .about-dropdown {
         display: none;
         position: absolute;
         top: 100%;
-        right: 0;
         background-color: black;
         a { display: block; }
     } /*hidden dropdown*/
-    #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover { display: block; } /*display dropdown on hover*/
+    #gameplay:hover + .gameplay-dropdown, .right-links .gameplay-dropdown:hover, #about:hover + .about-dropdown, .right-links .about-dropdown:hover { display: block; } /*display dropdown on hover*/
     /*music button*/
     button {
         cursor: url('../img/cursor-hover.png'), pointer;
