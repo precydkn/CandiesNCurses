@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="pages.css"> <!--all pages css-->
+    <link rel="stylesheet" href="contact.css"> <!--contact page css-->
+    <link rel="icon" type="images--" href="p-img/contact/mail.png">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <a href="https://www.takoboystudios.com/candies-n-curses" target="_blank" id="nav-logo"><img src="../img/home/logo cnc.png"></a>
+        <div class="right-links">
+            <button id="music-c"><img src="../img/home/button music muted.png" alt="Music Button"></button> <!--music button-->
+            <a href="../index.html" id="home">Home</a> 
+            <div class="about-container">
+                <a id="about">About</a> 
+                <div class="about-dropdown">
+                    <a href="about.html" id="game">Game</a>
+                    <a href="developers.html" id="developers">Developers</a>
+                </div>
+            </div>
+            <div class="gameplay-container">
+                <a href="gameplay.html" id="gameplay">Gameplay</a>
+                <div class="gameplay-dropdown">
+                    <a href="gameplay.html#Characters" class="dropdown-btn">Characters</a>
+                    <a href="gameplay.html#Rooms" class="dropdown-btn">Rooms</a>
+                    <a href="gameplay.html#Items" class="dropdown-btn">Items</a>
+                </div>
+            </div>
+            <a href="contact.html" role="link" aria-disabled="true" class="current-page">Contact</a> <!--current page link is not clickable-->
+        </div>            
+    </nav>
+    <section>
+        <div class="section-padding">
+            <h1>Contact Us</h1>
+            <div class="flex-contact">
+                <div class="location">
+                    <div class="tako-studios-logo">
+                        <a href="https://www.takoboystudios.com/" target="_blank"><img src="../img/footer/logo tako boy studios.png" alt="Tako Boys Studios Logo" id="tako-studios"></a>
+                    </div>
+                    <p><span>San Diego, CA</span><br><br>
+                        tom@takoboystudios.com<br>
+                        phil@takoboystudios.com<br>
+                    </p>
+                </div>
+                <div class="form">
+                    <div class="flex">
+                        <div>
+                            <label for="fname">First name</label>
+                            <input type="text" id="fname" name="fname">
+                        </div>
+                        <div>
+                            <label for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname">
+                        </div>
+                    </div>
+                    <div class="email-msg">
+                        <div class="email">
+                            <label for="email">Email Address</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="msg">
+                            <label for="msg">Message</label>
+                            <textarea id="msg" name="msg"></textarea>
+                        </div>
+                        <div class="flex">
+                            <small><i>! All fields are required</i></small>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-discord">
+                <div>
+                    <h2>Discord</h2>
+                    <p>Report bugs, offer feedback, and communicate with the developers and other community members directly by joining the Tako Boy Studios official Discord server!</p>
+                </div>
+                <div class="discord">
+                    <a href="https://discord.com/invite/takoboystudios" target="_blank"><img src="p-img/contact/discord-sign-up-banner.png" alt="Discord sign up banner"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+</body>
+</html>
